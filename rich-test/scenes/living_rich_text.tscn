@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/living_rich_text.gd" id="1"]
+
+[node name="LivingRichText" type="RichTextLabel"]
+offset_right = 700.0
+offset_bottom = 260.0
+bbcode_enabled = true
+clip_contents = false
+script = ExtResource("1")
