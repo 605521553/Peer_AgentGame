@@ -1,0 +1,76 @@
+[
+  {
+    "case": "ordinary",
+    "room": "perf-ordinary-1791876756",
+    "buildings": 20,
+    "voxels_each": 2188,
+    "faces_each": 2440,
+    "total_voxels": 43760,
+    "total_unmerged_faces": 48800,
+    "viewport": [
+      1920,
+      1080
+    ],
+    "canvas": [
+      1540,
+      1080
+    ],
+    "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 770 (0x00004680) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "browser": "153.0.8010.12",
+    "scene_ready_s": 3.89,
+    "fps_min": 60,
+    "fps_average": 60.0,
+    "frame_p95_ms_max": 16.6666666666667,
+    "metrics": {
+      "draw_calls": 244,
+      "fps": 60,
+      "frame_p95_ms": 16.6666666666667,
+      "memory_mb": null,
+      "mesh_build_ms": 218.5,
+      "queue": 0,
+      "rendered": 20,
+      "renderer": "gl_compatibility",
+      "seq": 24,
+      "triangles": 15976
+    },
+    "command_ms_p95": 49.3,
+    "console_errors": []
+  },
+  {
+    "case": "colorful_at_room_limits",
+    "room": "perf-colorful_at_room_limits-1791876785",
+    "buildings": 64,
+    "voxels_each": 2048,
+    "faces_each": 1024,
+    "total_voxels": 131072,
+    "total_unmerged_faces": 65536,
+    "viewport": [
+      1920,
+      1080
+    ],
+    "canvas": [
+      1540,
+      1080
+    ],
+    "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 770 (0x00004680) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "browser": "153.0.8010.12",
+    "scene_ready_s": 1.79,
+    "fps_min": 56,
+    "fps_average": 59.2,
+    "frame_p95_ms_max": 18.744060606061,
+    "metrics": {
+      "draw_calls": 718,
+      "fps": 60,
+      "frame_p95_ms": 16.6666666666667,
+      "memory_mb": null,
+      "mesh_build_ms": 120.3,
+      "queue": 0,
+      "rendered": 64,
+      "renderer": "gl_compatibility",
+      "seq": 68,
+      "triangles": 828258
+    },
+    "command_ms_p95": 60.83,
+    "console_errors": []
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "room": "ai-check-1791877307",
+  "model": "deepseek-v4-pro",
+  "create_status": "completed",
+  "create_metrics": {
+    "model": "deepseek-v4-pro",
+    "ai_ms": 8454,
+    "usage": {
+      "prompt_tokens": 1673,
+      "completion_tokens": 843,
+      "total_tokens": 2516,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536
+      },
+      "prompt_cache_hit_tokens": 1536,
+      "prompt_cache_miss_tokens": 137
+    },
+    "rules_version": "stage-01-v1",
+    "full_rules_attached": true,
+    "attempts": 1
+  },
+  "create_error": null,
+  "paint_status": "completed",
+  "paint_metrics": {
+    "model": "deepseek-v4-pro",
+    "ai_ms": 2680,
+    "usage": {
+      "prompt_tokens": 2129,
+      "completion_tokens": 132,
+      "total_tokens": 2261,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536
+      },
+      "prompt_cache_hit_tokens": 1536,
+      "prompt_cache_miss_tokens": 593
+    },
+    "rules_version": "stage-01-v1",
+    "full_rules_attached": true,
+    "attempts": 1
+  },
+  "voxel_count": 276,
+  "face_count": 616,
+  "size": [
+    12,
+    10,
+    12
+  ],
+  "changed_cells": [
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "shape_preserved": true,
+  "single_voxel_change": true,
+  "destroy_status": "completed",
+  "destroy_metrics": {
+    "model": "deepseek-v4-pro",
+    "ai_ms": 1897,
+    "usage": {
+      "prompt_tokens": 2170,
+      "completion_tokens": 107,
+      "total_tokens": 2277,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536
+      },
+      "prompt_cache_hit_tokens": 1536,
+      "prompt_cache_miss_tokens": 634
+    },
+    "rules_version": "stage-01-v1",
+    "full_rules_attached": true,
+    "attempts": 1
+  },
+  "removed": true,
+  "elapsed_s": 13.2
+}

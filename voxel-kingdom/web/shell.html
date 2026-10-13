@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voxel Kingdom · 体素王国</title>
+<link rel="stylesheet" href="/ui/style.css">
+$GODOT_HEAD_INCLUDE
+</head>
+<body>
+<main class="app">
+  <section class="world">
+    <canvas id="canvas" tabindex="0" aria-label="体素王国三维场景"></canvas>
+    <div class="brand"><div class="brand-icon">▦</div><div><strong>VOXEL KINGDOM</strong><span>由你的想象，建成一座王国</span></div><span class="stage-tag">创作模式</span></div>
+    <div class="world-top"><span id="connection" class="pill"><i></i>尚未进入房间</span><span id="player-zone" class="pill"></span></div>
+    <div class="compass"><span>北 N</span><b>↑</b><small>西 ←　→ 东</small><span>南 S</span></div>
+    <div class="toolbar"><button data-camera="home" title="回到我的领地">⌂ 我的领地</button><button data-camera="rotate_left" title="向左旋转">↶</button><button data-camera="rotate_right" title="向右旋转">↷</button><button data-camera="zoom_in" title="放大">＋</button><button data-camera="zoom_out" title="缩小">－</button><button data-camera="color" title="切换纯色检查模式">◐ 光照</button></div>
+    <div class="world-bottom"><span>WASD 平移　Q / E 旋转　滚轮缩放　右键拖动</span><span id="fps">准备场景…</span></div>
+    <div id="loading" class="loading"><b>构建你的世界</b><span id="load-status">正在加载 3D 场景</span><progress id="load-progress" max="100" value="0"></progress></div>
+    <div id="toast" class="toast" role="status"></div>
+  </section>
+  <aside class="sidebar">
+    <header><div class="eyebrow">你的王国</div><h1>从一句话开始</h1><p>设计、建造，让想象成为方块。</p></header>
+    <div class="room-line"><span id="room-label">共享建造房间</span><button id="switch-room" class="text-button">切换</button></div>
+    <div class="tabs"><button class="active" data-tab="chat">建造助手</button><button data-tab="buildings">建筑与模型 <span id="building-count">0</span></button></div>
+    <section id="chat-tab" class="tab-content active">
+      <div id="chat-log" class="chat-log" aria-live="polite"><div class="assistant-message"><div class="avatar">◇</div><div><b>王国建造助手</b><p>点击地图选择位置，然后告诉我你想建造什么。也可以点击建筑，修改某个方块的颜色。</p><small>DeepSeek · 操作由游戏规则验证</small></div></div></div>
+      <div class="suggestions"><button data-prompt="在选定位置建一座灰墙蓝顶的小城堡，有四座塔、空心庭院和一个门洞，尺寸不超过16×12×16。">四塔城堡</button><button data-prompt="在选定位置创建一座阶梯金字塔，每一层用不同颜色。">彩色金字塔</button><button data-prompt="把选中建筑的选中方块改成红色，其他所有方块保持不变。">单方块变色</button></div>
+      <form id="chat-form"><label for="prompt">描述你的想法</label><textarea id="prompt" maxlength="4000" rows="3" placeholder="例如：建一座灰色城堡，塔顶用蓝色…"></textarea><div class="composer-footer"><span id="ai-status">准备好聆听你的想法</span><button id="send" type="submit">发送 ↗</button></div></form>
+    </section>
+    <section id="buildings-tab" class="tab-content"><div id="building-list" class="building-list"></div><div class="model-actions"><button id="sample">＋ 放置示例城堡</button><button id="import">导入体素 JSON</button><button id="export">导出选中模型</button><input id="model-file" type="file" accept=".json,application/json" hidden></div></section>
+    <section class="selection-panel"><div class="eyebrow">当前选择</div><b id="selected-name">点击地面选择建造位置</b><span id="selected-detail">每一块颜色，都由你决定。</span><div id="entity-actions" hidden><div class="color-row"><input type="color" id="voxel-color" value="#2060ff" aria-label="选中方块颜色"><button id="paint">修改选中方块</button></div><div class="delete-row"><button id="demolish">拆除</button><button id="destroy">销毁</button></div></div></section>
+    <details class="diagnostics"><summary>运行状态与命令记录</summary><pre id="metrics"></pre><pre id="command-log">暂无命令</pre></details>
+    <footer><span class="dot"></span>第一阶段 · 多人自由建造</footer>
+  </aside>
+</main>
+<dialog id="join-dialog"><form id="join-form"><div class="eyebrow">WELCOME TO YOUR KINGDOM</div><h2>一起建造一个世界</h2><p>加入相同房间，与朋友实时分享建筑。</p><label for="name">你的名字</label><input id="name" value="建造者" maxlength="24" required><label for="room">房间名称</label><input id="room" value="kingdom" pattern="[A-Za-z0-9_\-]{1,40}" maxlength="40" required><small>字母、数字、横线或下划线，每个房间最多四人。</small><button id="join" type="submit">进入王国 →</button><span id="join-error" role="alert"></span></form></dialog>
+<script>window.voxelMessageQueue=[];window.voxelUiActions=[];window.voxelSelection={};</script>
+<script src="/ui/app.js" defer></script>
+<script src="$GODOT_URL"></script>
+<script>
+const GODOT_CONFIG=$GODOT_CONFIG;
+const engine=new Engine(GODOT_CONFIG);
+window.gameEngine=engine;
+if(!isSecureContext){document.getElementById('load-status').textContent='局域网游玩需要 HTTPS。请使用启动服务显示的 HTTPS 地址（默认端口 8766）。';}else{engine.startGame({onProgress:(current,total)=>{if(total)document.getElementById('load-progress').value=current/total*100;}}).then(()=>{document.getElementById('loading').hidden=true;}).catch(error=>{document.getElementById('load-status').textContent='场景加载失败：'+error.message;});}
+const canvas=document.getElementById('canvas');
+new ResizeObserver(entries=>{const rect=entries[0].contentRect;canvas.width=Math.round(rect.width);canvas.height=Math.round(rect.height);}).observe(document.querySelector('.world'));
+</script>
+</body>
+</html>

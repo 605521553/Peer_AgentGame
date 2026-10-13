@@ -1,0 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+/.venv/
+/build/
+/backend/data/
+/artifacts/runtime/
+__pycache__/
+.pytest_cache/
+.env
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm

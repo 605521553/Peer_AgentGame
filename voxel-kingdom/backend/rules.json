@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "rules_version": "stage-01-v1",
+  "mode": "multiplayer_building_sandbox",
+  "limits": {
+    "players": 4, "map_size": 128, "zone_size": 64,
+    "model_axis": 32, "voxels": 8192, "faces": 16384,
+    "palette": 8192, "ops": 1024, "op_visits": 1048576,
+    "player_buildings": 16, "room_buildings": 64,
+    "room_voxels": 131072, "room_faces": 65536,
+    "command_bytes": 1048576, "chat_chars": 4000,
+    "model_context_bytes": 700000, "ai_requests_per_minute": 6
+  },
+  "commands": {
+    "world.query": {"payload": {}},
+    "rules.query": {"payload": {}},
+    "entity.query": {"payload": {"entity_id": "string"}},
+    "building.create": {"payload": {"position": "[integer,1,integer]", "rotation_y_quarter_turns": "integer 0..3", "blueprint": "model OR blueprint_id (exactly one)"}},
+    "building.update_model": {"payload": {"entity_id": "string", "expected_entity_revision": "integer", "blueprint": "model OR blueprint_id (exactly one)"}},
+    "building.paint_voxel": {"payload": {"entity_id": "string", "expected_entity_revision": "integer", "voxel": "[local x,local y,local z] integers from selection.voxel", "color": "#RRGGBB string"}},
+    "building.demolish": {"payload": {"entity_id": "string", "expected_entity_revision": "integer"}},
+    "building.destroy": {"payload": {"entity_id": "string", "expected_entity_revision": "integer"}}
+  },
+  "coordinates": "1 voxel = 1 world unit. East +X, south +Z, up +Y. Anchor is rotated bounding-box minimum. Ground surface Y=1. quarter turn 1 maps local x,z to size_z-1-z,x.",
+  "model": {
+    "required": ["schema_version", "name", "size", "encoding", "palette"],
+    "size": "3 integers 1..32", "palette": "array of opaque sRGB #RRGGBB strings; every voxel may have its own color",
+    "cells_v1": "cells: [[x,y,z,color_index],...]. Unique integer coordinates within size. Missing cells are air.",
+    "box_ops_v1": "ops ordered; fill_box/clear_box use min and max_exclusive, fill_box includes color INTEGER PALETTE INDEX (not a hex color, not a string); set_voxel uses position and color INTEGER PALETTE INDEX. Last write wins. Every coordinate inside size. air is clear_box, never a palette entry.",
+    "box_example": {"schema_version": 1, "name": "灰墙蓝顶", "size": [4,4,4], "encoding": "box_ops_v1", "palette": ["#808080","#2060FF"], "ops": [{"op":"fill_box","min":[0,0,0],"max_exclusive":[4,3,4],"color":0},{"op":"clear_box","min":[1,1,1],"max_exclusive":[3,3,3]},{"op":"fill_box","min":[0,3,0],"max_exclusive":[4,4,4],"color":1}]},
+    "grounding": "At least one nonempty cell at local Y=0. No structural simulation. Empty models forbidden."
+  },
+  "permissions": "Creation owner always authenticated player. Only owner can update/demolish/destroy. All players may view all buildings. No owner_id/actor_player_id can be assigned by model or client.",
+  "placement": "Rotated whole bounding rectangle must fit player zone and not overlap any building. Courtyard reserves space too. Updates preserve identity/name/position/rotation/owner.",
+  "execution": "Immediate create/update/demolish. Destroy emits effect and immediately frees occupancy. No movable units, attacks, resources or construction. Stale entity revisions are rejected. One mutation per AI request.",
+  "ai_output": {
+    "schema_version": 1, "rules_version": "stage-01-v1",
+    "status": "commands | clarification | answer", "message": "Chinese explanation of plan, never claim executed yet",
+    "commands": "Exactly one {type,payload} mutation for commands; [] otherwise. Unknown fields forbidden. Ask clarification if no unambiguous target/position."
+  },
+  "example": {
+    "schema_version": 1, "rules_version": "stage-01-v1", "status": "commands", "message": "创建红色方块。",
+    "commands": [{"type": "building.create", "payload": {"position": [8,1,8], "rotation_y_quarter_turns": 0, "blueprint": {"schema_version": 1, "name": "红色方块", "size": [1,1,1], "encoding": "cells_v1", "palette": ["#FF4040"], "cells": [[0,0,0,0]]}}}]
+  }
+}
