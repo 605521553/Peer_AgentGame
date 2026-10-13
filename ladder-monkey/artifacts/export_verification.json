@@ -1,0 +1,59 @@
+{
+  "blended_vertices": 2540,
+  "bones": 49,
+  "engine": "4.7.2-stable (official)",
+  "errors": [],
+  "half_steps": 124,
+  "ik": {
+    "LF": {
+      "max_endpoint_error_m": 5.96046447753906E-08,
+      "max_planted_error_m": 5.96046447753906E-08,
+      "max_segment_length_error_m": 8.94069671630859E-07,
+      "reach_clamps": 0,
+      "solves": 10138
+    },
+    "LH": {
+      "max_endpoint_error_m": 4.4703483581543E-08,
+      "max_planted_error_m": 2.98023223876953E-08,
+      "max_segment_length_error_m": 6.55651092529297E-07,
+      "reach_clamps": 0,
+      "solves": 10138
+    },
+    "RF": {
+      "max_endpoint_error_m": 5.96046447753906E-08,
+      "max_planted_error_m": 5.96046447753906E-08,
+      "max_segment_length_error_m": 9.23871994018555E-07,
+      "reach_clamps": 0,
+      "solves": 10138
+    },
+    "RH": {
+      "max_endpoint_error_m": 4.4703483581543E-08,
+      "max_planted_error_m": 2.98023223876953E-08,
+      "max_segment_length_error_m": 6.55651092529297E-07,
+      "reach_clamps": 0,
+      "solves": 10138
+    }
+  },
+  "max_idle_drift_m": 0.0,
+  "max_joint_displacement_per_frame_m": 0.0808507427573204,
+  "max_root_motion": 0.0,
+  "max_rung_stagger": 1,
+  "max_target_slip_m": 0.0,
+  "max_torso_reach_correction_m": 0.0687224119901657,
+  "minimum_supports": 2,
+  "minimum_taunt_supports": 3,
+  "passed": true,
+  "physical_key_events": true,
+  "simulation_seconds": 168.966666666693,
+  "states": [
+    "ClimbIdle",
+    "ClimbUp",
+    "ClimbTransition",
+    "ClimbDown",
+    "TauntTurn",
+    "TauntPlay",
+    "TauntReturn"
+  ],
+  "taunts": 2,
+  "vertices": 10398
+}

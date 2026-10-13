@@ -1,0 +1,55 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started 项目初始化 (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | 正在扫描文件结构……[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | 正在加载全局类名……[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | 正在校验 GDExtension……[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | 正在创建自动加载脚本……[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | 正在初始化插件……[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | 正在启动文件扫描……[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1msavepack[22m | Started 打包中 (102 steps)[39m[0m
+[   1% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex[39m[0m
+[   1% ] [90m[1msavepack[22m | 正在保存文件：res://icon.svg.import[39m[0m
+[   6% ] [90m[1msavepack[22m | 正在保存文件：res://tools/verification.gdc[39m[0m
+[  11% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/follow_camera.gdc[39m[0m
+[  16% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/forest.gdc[39m[0m
+[  22% ] [90m[1msavepack[22m | 正在保存文件：res://shaders/retro.gdshader[39m[0m
+[  27% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/ladder.gdc[39m[0m
+[  32% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/main.gdc[39m[0m
+[  36% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-654646086726c6f8522c94effbb6f6d0-monkey_rig.scn[39m[0m
+[  42% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-f4a5759f621ee0012c203657a92ab724-climb_profile.res[39m[0m
+[  47% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-171b6540a4c3cdae5b0905e52ed5116f-camera.scn[39m[0m
+[  52% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-3aa35002fd37dc00e3e79d85fc7a0741-forest.scn[39m[0m
+[  57% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-ccee5f233e89c192c1c7880cf7b4d226-ladder.scn[39m[0m
+[  63% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn[39m[0m
+[  67% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/body_pose.gdc[39m[0m
+[  72% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_controller.gdc[39m[0m
+[  77% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_profile.gdc[39m[0m
+[  83% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/two_bone_ik.gdc[39m[0m
+[  88% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/monkey_rig.gdc[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/skin_geometry.gdc[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://tools/verification.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/follow_camera.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/forest.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/ladder.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/main.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://assets/monkey_rig.tscn.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://resources/climb_profile.tres.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/camera.tscn.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/forest.tscn.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/ladder.tscn.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/main.tscn.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/body_pose.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_controller.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_profile.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/two_bone_ik.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/monkey_rig.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/skin_geometry.gd.remap[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/global_script_class_cache.cfg[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://icon.svg[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/uid_cache.bin[39m[0m
+[  93% ] [90m[1msavepack[22m | 正在保存文件：res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
