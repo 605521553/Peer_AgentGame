@@ -1,0 +1,32 @@
+{
+  "name": "反弹行者",
+  "position": [
+    640,
+    601
+  ],
+  "radius": 17,
+  "hp": 100,
+  "gold": 15,
+  "max_weapons": 2,
+  "starting_weapons": [
+    "pistol"
+  ],
+  "stats": {
+    "damage_mult": 1,
+    "crit_chance": 0.05,
+    "crit_mult": 1.8,
+    "armor": 0,
+    "dodge": 0,
+    "bounce_bonus": 0,
+    "extra_bounces": 0,
+    "extra_pellets": 0,
+    "preview_reflections": 0,
+    "preview_length": 0,
+    "lifesteal": 0,
+    "split_extra": 0,
+    "pierce": 0,
+    "shield_break": 0,
+    "kill_split": 0
+  },
+  "visual": "player"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "pistol",
+    "extra_pellet_spread": 16,
+    "name": "折光手枪",
+    "description": "单发精准弹。适合绕过护盾、反弹增伤与暴击构筑。",
+    "price": 32,
+    "damage": 24,
+    "speed": 920,
+    "lifetime": 4,
+    "bounces": 7,
+    "pellets": 1,
+    "spread_degrees": 0,
+    "split": {
+      "after_bounces": 0,
+      "count": 0,
+      "damage_mult": 0.5,
+      "spread_degrees": 75
+    },
+    "visual": "pistol"
+  },
+  {
+    "id": "shotgun",
+    "extra_pellet_spread": 28,
+    "name": "棱镜霰弹",
+    "description": "5 枚扇形弹丸，各自反弹。窄通道内可多次集中命中。",
+    "price": 42,
+    "damage": 9,
+    "speed": 850,
+    "lifetime": 3.5,
+    "bounces": 5,
+    "pellets": 5,
+    "spread_degrees": 28,
+    "split": {
+      "after_bounces": 0,
+      "count": 0,
+      "damage_mult": 0.5,
+      "spread_degrees": 75
+    },
+    "visual": "shotgun"
+  },
+  {
+    "id": "splitter",
+    "extra_pellet_spread": 16,
+    "name": "星裂发射器",
+    "description": "主弹第 2 次反弹后分裂为 3 枚子弹。子弹继承寿命。",
+    "price": 48,
+    "damage": 19,
+    "speed": 880,
+    "lifetime": 4.5,
+    "bounces": 7,
+    "pellets": 1,
+    "spread_degrees": 0,
+    "split": {
+      "after_bounces": 2,
+      "count": 3,
+      "damage_mult": 0.65,
+      "spread_degrees": 70
+    },
+    "visual": "splitter"
+  }
+]

@@ -1,0 +1,255 @@
+[
+  {
+    "id": "chip",
+    "name": "路径芯片",
+    "description": "额外显示 2 次反弹，预测长度 +900。",
+    "price": 22,
+    "quality": 0,
+    "max_stacks": 3,
+    "visual": "chip",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "preview_reflections",
+        "value": 2
+      },
+      {
+        "op": "add_stat",
+        "stat": "preview_length",
+        "value": 900
+      }
+    ]
+  },
+  {
+    "id": "lens",
+    "name": "远距透镜",
+    "description": "预测长度 +1800，额外显示 1 次反弹。",
+    "price": 28,
+    "quality": 1,
+    "max_stacks": 2,
+    "visual": "chip",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "preview_length",
+        "value": 1800
+      },
+      {
+        "op": "add_stat",
+        "stat": "preview_reflections",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "power",
+    "name": "高能弹头",
+    "description": "所有武器伤害倍率 +20%。",
+    "price": 24,
+    "quality": 0,
+    "max_stacks": 5,
+    "visual": "power",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "damage_mult",
+        "value": 0.2
+      }
+    ]
+  },
+  {
+    "id": "bounce",
+    "name": "共振增幅器",
+    "description": "每次反弹增加基础伤害的 16%。反弹奖励有上限。",
+    "price": 32,
+    "quality": 1,
+    "max_stacks": 4,
+    "visual": "bounce",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "bounce_bonus",
+        "value": 0.16
+      }
+    ]
+  },
+  {
+    "id": "crit",
+    "name": "精密瞄具",
+    "description": "暴击率 +15%。",
+    "price": 23,
+    "quality": 0,
+    "max_stacks": 4,
+    "visual": "crit",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "crit_chance",
+        "value": 0.15
+      }
+    ]
+  },
+  {
+    "id": "heart",
+    "name": "生命核心",
+    "description": "最大生命 +20，同时恢复 20 点。",
+    "price": 25,
+    "quality": 0,
+    "max_stacks": 4,
+    "visual": "heart",
+    "effects": [
+      {
+        "op": "max_hp",
+        "value": 20
+      },
+      {
+        "op": "heal",
+        "value": 20
+      }
+    ]
+  },
+  {
+    "id": "armor",
+    "name": "缓冲装甲",
+    "description": "受到伤害减免 +12%，最多 65%。",
+    "price": 28,
+    "quality": 1,
+    "max_stacks": 4,
+    "visual": "armor",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "armor",
+        "value": 0.12
+      }
+    ]
+  },
+  {
+    "id": "dodge",
+    "name": "幻影模块",
+    "description": "闪避概率 +12%，最多 60%。",
+    "price": 25,
+    "quality": 1,
+    "max_stacks": 4,
+    "visual": "dodge",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "dodge",
+        "value": 0.12
+      }
+    ]
+  },
+  {
+    "id": "pellets",
+    "name": "多重棱镜",
+    "description": "每次发射额外 2 枚弹丸，分散在武器扇形中。",
+    "price": 35,
+    "quality": 2,
+    "max_stacks": 2,
+    "visual": "pellets",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "extra_pellets",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "echo",
+    "name": "反射镀层",
+    "description": "弹丸最大反弹次数 +3。",
+    "price": 23,
+    "quality": 0,
+    "max_stacks": 3,
+    "visual": "bounce",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "extra_bounces",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "vampire",
+    "name": "回流装置",
+    "description": "伤害的 8% 转为生命，每次射击至多回复 12。",
+    "price": 36,
+    "quality": 2,
+    "max_stacks": 2,
+    "visual": "heart",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "lifesteal",
+        "value": 0.08
+      }
+    ]
+  },
+  {
+    "id": "split",
+    "name": "分裂核心",
+    "description": "子母弹多分裂 2 枚子弹。",
+    "price": 30,
+    "quality": 1,
+    "max_stacks": 2,
+    "visual": "pellets",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "split_extra",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "breaker",
+    "name": "破盾弹头",
+    "description": "护盾命中正常造成伤害，取消敌对反射。",
+    "price": 48,
+    "quality": 3,
+    "max_stacks": 1,
+    "visual": "crit",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "shield_break",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "pierce",
+    "name": "穿透棱光",
+    "description": "每枚弹丸可穿透 1 名敌人。",
+    "price": 45,
+    "quality": 3,
+    "max_stacks": 2,
+    "visual": "power",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "pierce",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "nova",
+    "name": "超新星协议",
+    "description": "击杀时产生 3 枚派生弹，可触发至多 2 层。",
+    "price": 65,
+    "quality": 4,
+    "max_stacks": 1,
+    "visual": "pellets",
+    "effects": [
+      {
+        "op": "add_stat",
+        "stat": "kill_split",
+        "value": 3
+      }
+    ]
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "background": "#09121f",
+  "renderer_scene": "res://scenes/polygon_actor.tscn",
+  "arena_scene": "res://scenes/arena.tscn",
+  "ui_scene": "res://scenes/ui.tscn",
+  "capture_gold": 90,
+  "feedback_lifetime": 0.85,
+  "feedback_rise": 42,
+  "feedback_limit": 100,
+  "panel": "#111f30",
+  "panel_border": "#263c52",
+  "text": "#e4eff9",
+  "muted": "#8ba4bb",
+  "accent": "#69edcf",
+  "danger": "#ff707e",
+  "gold": "#ffcf78",
+  "grid": "#162434",
+  "wall": "#426079",
+  "obstacle_fill": "#203c51",
+  "obstacle_edge": "#65b5c5",
+  "preview": "#8cebdd",
+  "enemy_preview": "#ff707e",
+  "bullet_player": "#b7fff0",
+  "bullet_enemy": "#ff6579",
+  "quality_colors": [
+    "#acbdcb",
+    "#69edcf",
+    "#66b7ff",
+    "#bc91ff",
+    "#ffcf78"
+  ],
+  "font_names": ["Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC"],
+  "sound_scene": "res://scenes/sound.tscn",
+  "font_size": 18,
+  "title_size": 29,
+  "small_size": 14,
+  "grid_spacing": 40,
+  "trail_length": 18,
+  "bullet_radius": 4,
+  "preview_width": 2,
+  "wall_width": 3,
+  "styles": {
+    "player": {
+      "color": "#69edcf",
+      "shape": "diamond",
+      "texture": ""
+    },
+    "drone": {
+      "color": "#a9d7ef",
+      "shape": "hex",
+      "texture": ""
+    },
+    "guard": {
+      "color": "#bb9af7",
+      "shape": "hex",
+      "texture": ""
+    },
+    "sniper": {
+      "color": "#ff8290",
+      "shape": "triangle",
+      "texture": ""
+    },
+    "boss": {
+      "color": "#ffd380",
+      "shape": "octagon",
+      "texture": ""
+    },
+    "pistol": {
+      "color": "#69edcf",
+      "shape": "diamond",
+      "texture": ""
+    },
+    "shotgun": {
+      "color": "#ffd380",
+      "shape": "triangle",
+      "texture": ""
+    },
+    "splitter": {
+      "color": "#bb9af7",
+      "shape": "hex",
+      "texture": ""
+    },
+    "chip": {
+      "color": "#69edcf",
+      "shape": "diamond",
+      "texture": ""
+    },
+    "power": {
+      "color": "#ff8290",
+      "shape": "triangle",
+      "texture": ""
+    },
+    "bounce": {
+      "color": "#66b7ff",
+      "shape": "hex",
+      "texture": ""
+    },
+    "crit": {
+      "color": "#ffcf78",
+      "shape": "diamond",
+      "texture": ""
+    },
+    "heart": {
+      "color": "#ff8290",
+      "shape": "hex",
+      "texture": ""
+    },
+    "armor": {
+      "color": "#acbdcb",
+      "shape": "hex",
+      "texture": ""
+    },
+    "dodge": {
+      "color": "#bc91ff",
+      "shape": "diamond",
+      "texture": ""
+    },
+    "pellets": {
+      "color": "#bc91ff",
+      "shape": "octagon",
+      "texture": ""
+    }
+  }
+}

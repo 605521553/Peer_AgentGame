@@ -1,0 +1,150 @@
+{
+  "seed": 0,
+  "inputs": {
+    "fire": {"mouse": 1},
+    "cycle_next": {"mouse": 5},
+    "cycle_previous": {"mouse": 4},
+    "weapon_1": {"key": "1"},
+    "weapon_2": {"key": "2"},
+    "pause": {"key": "Escape"},
+    "fast_forward": {"key": "Space"},
+    "mute": {"key": "M"}
+  },
+  "weapon_actions": [{"action":"weapon_1","slot":0},{"action":"weapon_2","slot":1}],
+  "save_path": "user://profile.json",
+  "arena": {
+    "rect": [
+      48,
+      120,
+      1184,
+      520
+    ],
+    "aim_degrees": [
+      -170,
+      -10
+    ],
+    "min_aim_distance": 12
+  },
+  "simulation": {
+    "fixed_step": 0.008333333,
+    "max_frame_delta": 0.08,
+    "speed_multiplier": 3,
+    "epsilon": 0.04,
+    "max_collisions_per_step": 12,
+    "max_alive": 128,
+    "max_created_per_shot": 256,
+    "max_split_depth": 2,
+    "max_turn_seconds": 9
+  },
+  "preview": {
+    "base_reflections": 0,
+    "base_length": 1250,
+    "max_reflections": 16,
+    "max_length": 12000,
+    "spread_rays": 3
+  },
+  "generation": {
+    "max_attempts": 30,
+    "sample_angles": 721,
+    "minimum_angle_hits": 2,
+    "clearance": 14,
+    "safe_radius": 78
+  },
+  "shop": {
+    "quality_affix_count": [0, 0, 1, 2, 3],
+    "required_types": ["heal", "weapon", "item", "random"],
+    "random_types": ["weapon", "item", "item"],
+    "slots": 4,
+    "refresh_base": 5,
+    "refresh_increment": 5,
+    "upgrade_base": 22,
+    "upgrade_growth": 12,
+    "upgrade_damage": 0.18,
+    "max_upgrade": 5,
+    "sell_ratio": 0.45,
+    "quality_weights": [
+      [
+        60,
+        30,
+        10,
+        0,
+        0
+      ],
+      [
+        45,
+        32,
+        18,
+        5,
+        0
+      ],
+      [
+        35,
+        32,
+        24,
+        8,
+        1
+      ],
+      [
+        25,
+        30,
+        30,
+        12,
+        3
+      ],
+      [
+        15,
+        25,
+        35,
+        20,
+        5
+      ]
+    ],
+    "quality_names": [
+      "普通",
+      "优秀",
+      "稀有",
+      "史诗",
+      "传说"
+    ],
+    "quality_damage": [
+      1,
+      1.15,
+      1.3,
+      1.5,
+      1.8
+    ],
+    "quality_price": [
+      1,
+      1.2,
+      1.55,
+      2,
+      2.8
+    ],
+    "heal": {
+      "visual": "heart",
+      "name": "应急修复",
+      "description": "恢复 30 点生命。每个商店提供一份。",
+      "amount": 30,
+      "price": 12
+    }
+  },
+  "rewards": {
+    "clear": 15,
+    "precision": 10,
+    "no_damage": 8,
+    "chain_per_kill": 2,
+    "chain_cap": 8,
+    "drop_chance": 0.12
+  },
+  "combat": {
+    "kill_split_spread": 90,
+    "kill_split_damage_mult": 0.45,
+    "warning_seconds": 0.9,
+    "round_end_seconds": 0.3,
+    "armor_cap": 0.65,
+    "dodge_cap": 0.6,
+    "crit_cap": 1,
+    "bounce_bonus_cap": 2.5,
+    "heal_cap_per_shot": 12
+  }
+}

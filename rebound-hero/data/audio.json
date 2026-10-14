@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "volume_db": -19,
+  "sample_rate": 22050,
+  "voices": 6,
+  "minimum_gap": 0.035,
+  "sounds": {
+    "fire": {"frequency":760,"end_frequency":180,"duration":0.1,"gain":0.7},
+    "bounce": {"frequency":1100,"end_frequency":800,"duration":0.045,"gain":0.25},
+    "damage": {"frequency":530,"end_frequency":250,"duration":0.075,"gain":0.6},
+    "crit": {"frequency":950,"end_frequency":450,"duration":0.12,"gain":0.65},
+    "kill": {"frequency":620,"end_frequency":1240,"duration":0.14,"gain":0.6},
+    "hurt": {"frequency":190,"end_frequency":65,"duration":0.2,"gain":0.8},
+    "shield": {"frequency":1250,"end_frequency":380,"duration":0.12,"gain":0.55},
+    "split": {"frequency":700,"end_frequency":1450,"duration":0.09,"gain":0.45},
+    "dodge": {"frequency":440,"end_frequency":880,"duration":0.08,"gain":0.4}
+  }
+}

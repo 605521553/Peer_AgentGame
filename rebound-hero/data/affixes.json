@@ -1,0 +1,7 @@
+[
+  {"id":"mirror","name":"镜面","description":"最大反弹次数 +2","weapons":[],"modifiers":[{"path":"bounces","op":"add","value":2}]},
+  {"id":"charged","name":"蓄能","description":"基础伤害提高 15%","weapons":[],"modifiers":[{"path":"damage","op":"multiply","value":1.15}]},
+  {"id":"long_range","name":"远航","description":"弹丸寿命延长 20%","weapons":[],"modifiers":[{"path":"lifetime","op":"multiply","value":1.2}]},
+  {"id":"scatter","name":"散射","description":"额外 1 枚弹丸，扇形至少 12°","weapons":[],"modifiers":[{"path":"pellets","op":"add","value":1},{"path":"spread_degrees","op":"minimum","value":12}]},
+  {"id":"starburst","name":"星爆","description":"分裂子弹数量 +2","weapons":["splitter"],"modifiers":[{"path":"split.count","op":"add","value":2}]}
+]

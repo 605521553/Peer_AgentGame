@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "schema": "schema.json",
+  "files": {
+    "audio": "audio.json",
+    "affixes": "affixes.json",
+    "rules": "rules.json",
+    "player": "player.json",
+    "weapons": "weapons.json",
+    "enemies": "enemies.json",
+    "items": "items.json",
+    "levels": "levels.json",
+    "visuals": "visuals.json"
+  }
+}

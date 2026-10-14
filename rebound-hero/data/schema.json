@@ -1,0 +1,1087 @@
+{
+  "rules": {
+    "type": "object",
+    "fields": {
+      "seed": {
+        "type": "number",
+        "min": 0,
+        "integer": true
+      },
+      "save_path": {
+        "type": "string"
+      },
+      "inputs": {
+        "type": "object",
+        "values": {
+          "type": "object",
+          "fields": {
+            "key": {
+              "type": "string",
+              "optional": true
+            },
+            "mouse": {
+              "type": "number",
+              "min": 1,
+              "integer": true,
+              "optional": true
+            }
+          }
+        }
+      },
+      "weapon_actions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "fields": {
+            "action": {
+              "type": "string"
+            },
+            "slot": {
+              "type": "number",
+              "min": 0,
+              "integer": true
+            }
+          }
+        },
+        "min_length": 1
+      },
+      "arena": {
+        "type": "object",
+        "fields": {
+          "rect": {
+            "type": "array",
+            "length": 4,
+            "items": {
+              "type": "number"
+            }
+          },
+          "aim_degrees": {
+            "type": "array",
+            "length": 2,
+            "items": {
+              "type": "number"
+            }
+          },
+          "min_aim_distance": {
+            "type": "number",
+            "min": 0.00001
+          }
+        }
+      },
+      "simulation": {
+        "type": "object",
+        "fields": {
+          "fixed_step": {
+            "type": "number",
+            "min": 0.00001
+          },
+          "max_frame_delta": {
+            "type": "number",
+            "min": 0.00001
+          },
+          "speed_multiplier": {
+            "type": "number",
+            "min": 0.00001
+          },
+          "epsilon": {
+            "type": "number",
+            "min": 0.00001
+          },
+          "max_collisions_per_step": {
+            "type": "number",
+            "min": 0.00001
+          },
+          "max_alive": {
+            "type": "number",
+            "min": 0.00001
+          },
+          "max_created_per_shot": {
+            "type": "number",
+            "min": 0.00001
+          },
+          "max_split_depth": {
+            "type": "number",
+            "min": 0.00001
+          },
+          "max_turn_seconds": {
+            "type": "number",
+            "min": 0.00001
+          }
+        }
+      },
+      "preview": {
+        "type": "object",
+        "fields": {
+          "base_reflections": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "base_length": {
+            "type": "number",
+            "min": 0.00001
+          },
+          "max_reflections": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "max_length": {
+            "type": "number",
+            "min": 0.00001
+          },
+          "spread_rays": {
+            "type": "number",
+            "min": 1,
+            "integer": true
+          }
+        }
+      },
+      "generation": {
+        "type": "object",
+        "fields": {
+          "max_attempts": {
+            "type": "number",
+            "min": 1,
+            "integer": true
+          },
+          "sample_angles": {
+            "type": "number",
+            "min": 2,
+            "integer": true
+          },
+          "minimum_angle_hits": {
+            "type": "number",
+            "min": 1,
+            "integer": true
+          },
+          "clearance": {
+            "type": "number",
+            "min": 0
+          },
+          "safe_radius": {
+            "type": "number",
+            "min": 0.00001
+          }
+        }
+      },
+      "shop": {
+        "type": "object",
+        "fields": {
+          "required_types": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "heal",
+                "weapon",
+                "item",
+                "random"
+              ]
+            },
+            "min_length": 1
+          },
+          "random_types": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "weapon",
+                "item"
+              ]
+            },
+            "min_length": 1
+          },
+          "quality_affix_count": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "min": 0,
+              "integer": true
+            },
+            "min_length": 1
+          },
+          "slots": {
+            "type": "number",
+            "min": 1,
+            "integer": true
+          },
+          "refresh_base": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "refresh_increment": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "upgrade_base": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "upgrade_growth": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "upgrade_damage": {
+            "type": "number",
+            "min": 0
+          },
+          "max_upgrade": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "sell_ratio": {
+            "type": "number",
+            "min": 0
+          },
+          "quality_weights": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "min": 0
+              },
+              "min_length": 1
+            },
+            "min_length": 1
+          },
+          "quality_names": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "min_length": 1
+          },
+          "quality_damage": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "min": 0.00001
+            },
+            "min_length": 1
+          },
+          "quality_price": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "min": 0.00001
+            },
+            "min_length": 1
+          },
+          "heal": {
+            "type": "object",
+            "fields": {
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number",
+                "min": 0.00001
+              },
+              "price": {
+                "type": "number",
+                "min": 0,
+                "integer": true
+              },
+              "visual": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "rewards": {
+        "type": "object",
+        "fields": {
+          "clear": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "precision": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "no_damage": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "chain_per_kill": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "chain_cap": {
+            "type": "number",
+            "min": 0,
+            "integer": true
+          },
+          "drop_chance": {
+            "type": "number",
+            "min": 0
+          }
+        }
+      },
+      "combat": {
+        "type": "object",
+        "fields": {
+          "warning_seconds": {
+            "type": "number",
+            "min": 0
+          },
+          "round_end_seconds": {
+            "type": "number",
+            "min": 0
+          },
+          "armor_cap": {
+            "type": "number",
+            "min": 0
+          },
+          "dodge_cap": {
+            "type": "number",
+            "min": 0
+          },
+          "crit_cap": {
+            "type": "number",
+            "min": 0
+          },
+          "bounce_bonus_cap": {
+            "type": "number",
+            "min": 0
+          },
+          "heal_cap_per_shot": {
+            "type": "number",
+            "min": 0
+          },
+          "kill_split_spread": {
+            "type": "number",
+            "min": 0
+          },
+          "kill_split_damage_mult": {
+            "type": "number",
+            "min": 0
+          }
+        }
+      }
+    }
+  },
+  "player": {
+    "type": "object",
+    "fields": {
+      "name": {
+        "type": "string"
+      },
+      "position": {
+        "type": "array",
+        "length": 2,
+        "items": {
+          "type": "number"
+        }
+      },
+      "radius": {
+        "type": "number",
+        "min": 0.00001
+      },
+      "hp": {
+        "type": "number",
+        "min": 0.00001
+      },
+      "gold": {
+        "type": "number",
+        "min": 0,
+        "integer": true
+      },
+      "max_weapons": {
+        "type": "number",
+        "min": 1,
+        "integer": true
+      },
+      "starting_weapons": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "min_length": 1
+      },
+      "stats": {
+        "type": "object",
+        "fields": {
+          "damage_mult": {
+            "type": "number",
+            "min": 0
+          },
+          "crit_chance": {
+            "type": "number",
+            "min": 0
+          },
+          "crit_mult": {
+            "type": "number",
+            "min": 0
+          },
+          "armor": {
+            "type": "number",
+            "min": 0
+          },
+          "dodge": {
+            "type": "number",
+            "min": 0
+          },
+          "bounce_bonus": {
+            "type": "number",
+            "min": 0
+          },
+          "extra_bounces": {
+            "type": "number",
+            "min": 0
+          },
+          "extra_pellets": {
+            "type": "number",
+            "min": 0
+          },
+          "preview_reflections": {
+            "type": "number",
+            "min": 0
+          },
+          "preview_length": {
+            "type": "number",
+            "min": 0
+          },
+          "lifesteal": {
+            "type": "number",
+            "min": 0
+          },
+          "split_extra": {
+            "type": "number",
+            "min": 0
+          },
+          "pierce": {
+            "type": "number",
+            "min": 0
+          },
+          "shield_break": {
+            "type": "number",
+            "min": 0
+          },
+          "kill_split": {
+            "type": "number",
+            "min": 0
+          }
+        }
+      },
+      "visual": {
+        "type": "string"
+      }
+    }
+  },
+  "weapons": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "fields": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number",
+          "min": 0,
+          "integer": true
+        },
+        "damage": {
+          "type": "number",
+          "min": 0.00001
+        },
+        "speed": {
+          "type": "number",
+          "min": 0.00001
+        },
+        "lifetime": {
+          "type": "number",
+          "min": 0.00001
+        },
+        "bounces": {
+          "type": "number",
+          "min": 0,
+          "integer": true
+        },
+        "pellets": {
+          "type": "number",
+          "min": 1,
+          "integer": true
+        },
+        "spread_degrees": {
+          "type": "number",
+          "min": 0
+        },
+        "extra_pellet_spread": {
+          "type": "number",
+          "min": 0
+        },
+        "split": {
+          "type": "object",
+          "fields": {
+            "after_bounces": {
+              "type": "number",
+              "min": 0,
+              "integer": true
+            },
+            "count": {
+              "type": "number",
+              "min": 0,
+              "integer": true
+            },
+            "damage_mult": {
+              "type": "number",
+              "min": 0
+            },
+            "spread_degrees": {
+              "type": "number",
+              "min": 0
+            }
+          }
+        },
+        "visual": {
+          "type": "string"
+        }
+      }
+    },
+    "min_length": 1
+  },
+  "enemies": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "fields": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "hp": {
+          "type": "number",
+          "min": 0.00001
+        },
+        "radius": {
+          "type": "number",
+          "min": 0.00001
+        },
+        "reward": {
+          "type": "number",
+          "min": 0,
+          "integer": true
+        },
+        "visual": {
+          "type": "string"
+        },
+        "behaviors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "fields": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "shield",
+                  "attack"
+                ]
+              },
+              "arc_degrees": {
+                "type": "number",
+                "min": 0,
+                "optional": true
+              },
+              "facing_degrees": {
+                "type": "number",
+                "optional": true
+              },
+              "rotate_per_round": {
+                "type": "number",
+                "optional": true
+              },
+              "damage": {
+                "type": "number",
+                "min": 0.00001,
+                "optional": true
+              },
+              "pellets": {
+                "type": "number",
+                "min": 1,
+                "integer": true,
+                "optional": true
+              },
+              "spread_degrees": {
+                "type": "number",
+                "min": 0,
+                "optional": true
+              },
+              "speed": {
+                "type": "number",
+                "min": 0.00001,
+                "optional": true
+              },
+              "lifetime": {
+                "type": "number",
+                "min": 0.00001,
+                "optional": true
+              },
+              "bounces": {
+                "type": "number",
+                "min": 0,
+                "integer": true,
+                "optional": true
+              }
+            }
+          },
+          "min_length": 0
+        }
+      }
+    },
+    "min_length": 1
+  },
+  "items": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "fields": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number",
+          "min": 0,
+          "integer": true
+        },
+        "quality": {
+          "type": "number",
+          "min": 0,
+          "integer": true
+        },
+        "max_stacks": {
+          "type": "number",
+          "min": 1,
+          "integer": true
+        },
+        "visual": {
+          "type": "string"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "fields": {
+              "op": {
+                "type": "string",
+                "enum": [
+                  "add_stat",
+                  "heal",
+                  "max_hp"
+                ]
+              },
+              "stat": {
+                "type": "string",
+                "optional": true
+              },
+              "value": {
+                "type": "number"
+              }
+            }
+          },
+          "min_length": 1
+        }
+      }
+    },
+    "min_length": 0
+  },
+  "affixes": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "fields": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "weapons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "min_length": 0
+        },
+        "modifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "fields": {
+              "path": {
+                "type": "string"
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "add",
+                  "multiply",
+                  "minimum"
+                ]
+              },
+              "value": {
+                "type": "number"
+              }
+            }
+          },
+          "min_length": 1
+        }
+      }
+    },
+    "min_length": 0
+  },
+  "levels": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "fields": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "target_shots": {
+          "type": "number",
+          "min": 1,
+          "integer": true
+        },
+        "hp_mult": {
+          "type": "number",
+          "min": 0.00001
+        },
+        "attack_mult": {
+          "type": "number",
+          "min": 0.00001
+        },
+        "enemy_jitter": {
+          "type": "number",
+          "min": 0
+        },
+        "obstacle_jitter": {
+          "type": "number",
+          "min": 0
+        },
+        "shop_featured": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "fields": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "item",
+                  "weapon"
+                ]
+              },
+              "id": {
+                "type": "string"
+              }
+            }
+          },
+          "min_length": 0,
+          "optional": true
+        },
+        "obstacles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "fields": {
+              "shape": {
+                "type": "string",
+                "enum": [
+                  "rect",
+                  "circle",
+                  "triangle"
+                ]
+              },
+              "position": {
+                "type": "array",
+                "length": 2,
+                "items": {
+                  "type": "number"
+                }
+              },
+              "size": {
+                "type": "array",
+                "length": 2,
+                "items": {
+                  "type": "number"
+                },
+                "optional": true
+              },
+              "rotation": {
+                "type": "number",
+                "optional": true
+              },
+              "radius": {
+                "type": "number",
+                "min": 0.00001,
+                "optional": true
+              }
+            }
+          },
+          "min_length": 0
+        },
+        "enemies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "fields": {
+              "type": {
+                "type": "string"
+              },
+              "position": {
+                "type": "array",
+                "length": 2,
+                "items": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "min_length": 1
+        }
+      }
+    },
+    "min_length": 1
+  },
+  "visuals": {
+    "type": "object",
+    "fields": {
+      "renderer_scene": {
+        "type": "string"
+      },
+      "arena_scene": {
+        "type": "string"
+      },
+      "ui_scene": {
+        "type": "string"
+      },
+      "sound_scene": {
+        "type": "string"
+      },
+      "font_names": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "min_length": 1
+      },
+      "capture_gold": {
+        "type": "number",
+        "min": 0,
+        "integer": true
+      },
+      "feedback_lifetime": {
+        "type": "number",
+        "min": 0.00001
+      },
+      "feedback_rise": {
+        "type": "number",
+        "min": 0
+      },
+      "feedback_limit": {
+        "type": "number",
+        "min": 1,
+        "integer": true
+      },
+      "font_size": {
+        "type": "number",
+        "min": 0.00001
+      },
+      "title_size": {
+        "type": "number",
+        "min": 0.00001
+      },
+      "small_size": {
+        "type": "number",
+        "min": 0.00001
+      },
+      "grid_spacing": {
+        "type": "number",
+        "min": 1,
+        "integer": true
+      },
+      "trail_length": {
+        "type": "number",
+        "min": 0
+      },
+      "bullet_radius": {
+        "type": "number",
+        "min": 0.00001
+      },
+      "preview_width": {
+        "type": "number",
+        "min": 0.00001
+      },
+      "wall_width": {
+        "type": "number",
+        "min": 0.00001
+      },
+      "quality_colors": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "min_length": 1
+      },
+      "styles": {
+        "type": "object",
+        "values": {
+          "type": "object",
+          "fields": {
+            "color": {
+              "type": "string"
+            },
+            "shape": {
+              "type": "string",
+              "enum": [
+                "triangle",
+                "diamond",
+                "hex",
+                "octagon"
+              ]
+            },
+            "texture": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "background": {
+        "type": "string"
+      },
+      "panel": {
+        "type": "string"
+      },
+      "panel_border": {
+        "type": "string"
+      },
+      "text": {
+        "type": "string"
+      },
+      "muted": {
+        "type": "string"
+      },
+      "accent": {
+        "type": "string"
+      },
+      "danger": {
+        "type": "string"
+      },
+      "gold": {
+        "type": "string"
+      },
+      "grid": {
+        "type": "string"
+      },
+      "wall": {
+        "type": "string"
+      },
+      "obstacle_fill": {
+        "type": "string"
+      },
+      "obstacle_edge": {
+        "type": "string"
+      },
+      "preview": {
+        "type": "string"
+      },
+      "enemy_preview": {
+        "type": "string"
+      },
+      "bullet_player": {
+        "type": "string"
+      },
+      "bullet_enemy": {
+        "type": "string"
+      }
+    }
+  },
+  "audio": {
+    "type": "object",
+    "fields": {
+      "enabled": {
+        "type": "bool"
+      },
+      "volume_db": {
+        "type": "number"
+      },
+      "sample_rate": {
+        "type": "number",
+        "min": 1,
+        "integer": true
+      },
+      "voices": {
+        "type": "number",
+        "min": 1,
+        "integer": true
+      },
+      "minimum_gap": {
+        "type": "number",
+        "min": 0
+      },
+      "sounds": {
+        "type": "object",
+        "values": {
+          "type": "object",
+          "fields": {
+            "frequency": {
+              "type": "number",
+              "min": 0.00001
+            },
+            "end_frequency": {
+              "type": "number",
+              "min": 0.00001
+            },
+            "duration": {
+              "type": "number",
+              "min": 0.00001
+            },
+            "gain": {
+              "type": "number",
+              "min": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}

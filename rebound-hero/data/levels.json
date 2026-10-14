@@ -1,0 +1,398 @@
+[
+  {
+    "id": "first_light",
+    "shop_featured": [{"type":"item","id":"chip"},{"type":"weapon","id":"shotgun"}],
+    "name": "初光",
+    "subtitle": "先尝试直击，再借助两侧镜面绕射。",
+    "target_shots": 4,
+    "hp_mult": 1,
+    "attack_mult": 1,
+    "enemy_jitter": 16,
+    "obstacle_jitter": 8,
+    "obstacles": [
+      {
+        "shape": "rect",
+        "position": [
+          410,
+          354
+        ],
+        "size": [
+          150,
+          22
+        ],
+        "rotation": 24
+      },
+      {
+        "shape": "rect",
+        "position": [
+          870,
+          354
+        ],
+        "size": [
+          150,
+          22
+        ],
+        "rotation": -24
+      }
+    ],
+    "enemies": [
+      {
+        "type": "drone",
+        "position": [
+          385,
+          225
+        ]
+      },
+      {
+        "type": "drone",
+        "position": [
+          640,
+          215
+        ]
+      },
+      {
+        "type": "sniper",
+        "position": [
+          895,
+          225
+        ]
+      }
+    ]
+  },
+  {
+    "id": "orbit",
+    "shop_featured": [{"type":"weapon","id":"splitter"}],
+    "name": "曲面回廊",
+    "subtitle": "圆形表面会随命中位置改变反射角度。",
+    "target_shots": 5,
+    "hp_mult": 1.1,
+    "attack_mult": 1,
+    "enemy_jitter": 14,
+    "obstacle_jitter": 10,
+    "obstacles": [
+      {
+        "shape": "circle",
+        "position": [
+          490,
+          360
+        ],
+        "radius": 54
+      },
+      {
+        "shape": "circle",
+        "position": [
+          790,
+          360
+        ],
+        "radius": 54
+      },
+      {
+        "shape": "rect",
+        "position": [
+          640,
+          270
+        ],
+        "size": [
+          120,
+          18
+        ],
+        "rotation": 0
+      }
+    ],
+    "enemies": [
+      {
+        "type": "sniper",
+        "position": [
+          280,
+          215
+        ]
+      },
+      {
+        "type": "drone",
+        "position": [
+          520,
+          190
+        ]
+      },
+      {
+        "type": "drone",
+        "position": [
+          760,
+          190
+        ]
+      },
+      {
+        "type": "sniper",
+        "position": [
+          1000,
+          215
+        ]
+      }
+    ]
+  },
+  {
+    "id": "backdoor",
+    "name": "镜盾侧翼",
+    "subtitle": "护盾朝下。利用侧壁或三角镜从侧面与背后命中。",
+    "target_shots": 6,
+    "hp_mult": 1.15,
+    "attack_mult": 1.1,
+    "enemy_jitter": 10,
+    "obstacle_jitter": 6,
+    "obstacles": [
+      {
+        "shape": "triangle",
+        "position": [
+          360,
+          360
+        ],
+        "size": [
+          100,
+          100
+        ],
+        "rotation": 20
+      },
+      {
+        "shape": "triangle",
+        "position": [
+          920,
+          360
+        ],
+        "size": [
+          100,
+          100
+        ],
+        "rotation": -20
+      },
+      {
+        "shape": "rect",
+        "position": [
+          640,
+          410
+        ],
+        "size": [
+          145,
+          18
+        ],
+        "rotation": 0
+      }
+    ],
+    "enemies": [
+      {
+        "type": "guard",
+        "position": [
+          640,
+          235
+        ]
+      },
+      {
+        "type": "sniper",
+        "position": [
+          290,
+          200
+        ]
+      },
+      {
+        "type": "sniper",
+        "position": [
+          990,
+          200
+        ]
+      },
+      {
+        "type": "drone",
+        "position": [
+          510,
+          195
+        ]
+      },
+      {
+        "type": "drone",
+        "position": [
+          770,
+          195
+        ]
+      }
+    ]
+  },
+  {
+    "id": "crossfire",
+    "name": "交叉火线",
+    "subtitle": "优先解决射手，减少每个回合的反击。",
+    "target_shots": 7,
+    "hp_mult": 1.25,
+    "attack_mult": 1.15,
+    "enemy_jitter": 12,
+    "obstacle_jitter": 8,
+    "obstacles": [
+      {
+        "shape": "rect",
+        "position": [
+          410,
+          430
+        ],
+        "size": [
+          155,
+          20
+        ],
+        "rotation": 35
+      },
+      {
+        "shape": "rect",
+        "position": [
+          870,
+          430
+        ],
+        "size": [
+          155,
+          20
+        ],
+        "rotation": -35
+      },
+      {
+        "shape": "circle",
+        "position": [
+          640,
+          330
+        ],
+        "radius": 47
+      },
+      {
+        "shape": "triangle",
+        "position": [
+          280,
+          305
+        ],
+        "size": [
+          70,
+          70
+        ],
+        "rotation": 35
+      },
+      {
+        "shape": "triangle",
+        "position": [
+          1000,
+          305
+        ],
+        "size": [
+          70,
+          70
+        ],
+        "rotation": -35
+      }
+    ],
+    "enemies": [
+      {
+        "type": "guard",
+        "position": [
+          455,
+          215
+        ]
+      },
+      {
+        "type": "guard",
+        "position": [
+          825,
+          215
+        ]
+      },
+      {
+        "type": "sniper",
+        "position": [
+          250,
+          180
+        ]
+      },
+      {
+        "type": "sniper",
+        "position": [
+          1030,
+          180
+        ]
+      },
+      {
+        "type": "sniper",
+        "position": [
+          640,
+          180
+        ]
+      }
+    ]
+  },
+  {
+    "id": "core",
+    "name": "折光核心",
+    "subtitle": "核心每轮旋转护盾。瞄准当前弱点，先清理护卫。",
+    "target_shots": 9,
+    "hp_mult": 1,
+    "attack_mult": 1.2,
+    "enemy_jitter": 0,
+    "obstacle_jitter": 0,
+    "obstacles": [
+      {
+        "shape": "rect",
+        "position": [
+          365,
+          395
+        ],
+        "size": [
+          165,
+          22
+        ],
+        "rotation": 30
+      },
+      {
+        "shape": "rect",
+        "position": [
+          915,
+          395
+        ],
+        "size": [
+          165,
+          22
+        ],
+        "rotation": -30
+      },
+      {
+        "shape": "circle",
+        "position": [
+          480,
+          295
+        ],
+        "radius": 40
+      },
+      {
+        "shape": "circle",
+        "position": [
+          800,
+          295
+        ],
+        "radius": 40
+      }
+    ],
+    "enemies": [
+      {
+        "type": "boss",
+        "position": [
+          640,
+          210
+        ]
+      },
+      {
+        "type": "sniper",
+        "position": [
+          245,
+          210
+        ]
+      },
+      {
+        "type": "sniper",
+        "position": [
+          1035,
+          210
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,71 @@
+[
+  {
+    "id": "drone",
+    "name": "靶机",
+    "hp": 22,
+    "radius": 21,
+    "reward": 6,
+    "visual": "drone",
+    "behaviors": []
+  },
+  {
+    "id": "guard",
+    "name": "镜盾守卫",
+    "hp": 42,
+    "radius": 25,
+    "reward": 10,
+    "visual": "guard",
+    "behaviors": [
+      {
+        "type": "shield",
+        "arc_degrees": 120,
+        "facing_degrees": 90,
+        "rotate_per_round": 0
+      }
+    ]
+  },
+  {
+    "id": "sniper",
+    "name": "脉冲射手",
+    "hp": 34,
+    "radius": 23,
+    "reward": 12,
+    "visual": "sniper",
+    "behaviors": [
+      {
+        "type": "attack",
+        "damage": 10,
+        "pellets": 1,
+        "spread_degrees": 0,
+        "speed": 690,
+        "lifetime": 3,
+        "bounces": 1
+      }
+    ]
+  },
+  {
+    "id": "boss",
+    "name": "折光核心",
+    "hp": 170,
+    "radius": 39,
+    "reward": 35,
+    "visual": "boss",
+    "behaviors": [
+      {
+        "type": "shield",
+        "arc_degrees": 100,
+        "facing_degrees": 90,
+        "rotate_per_round": 45
+      },
+      {
+        "type": "attack",
+        "damage": 12,
+        "pellets": 3,
+        "spread_degrees": 20,
+        "speed": 710,
+        "lifetime": 3,
+        "bounces": 2
+      }
+    ]
+  }
+]
