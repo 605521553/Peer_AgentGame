@@ -1,0 +1,12 @@
+{
+  "room": "recovery-1792060936",
+  "public_url": "https://140.143.163.231",
+  "browser_offline_recovery": true,
+  "server_restart_persistence": true,
+  "both_websockets_reopened": true,
+  "sessions_survive_restart": true,
+  "post_restart_mutation_synced": true,
+  "recovery_seconds": 3.36,
+  "physical_devices": 1,
+  "isolated_browser_contexts": 2
+}

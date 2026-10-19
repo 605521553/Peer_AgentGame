@@ -4,15 +4,19 @@ import time
 from pathlib import Path
 import httpx
 import sys
+import os
+import ssl
 sys.stdout.reconfigure(encoding="utf-8")
 
-base="http://127.0.0.1:8765"
+base=os.environ.get("VOXEL_TEST_BASE_URL","http://127.0.0.1:8765")
 room="ai-check-"+str(int(time.time()))
 root=Path(__file__).resolve().parents[1]
-out=root / "artifacts/acceptance"
+out=Path(os.environ.get("VOXEL_TEST_OUTPUT", str(root / "artifacts/acceptance")))
 out.mkdir(parents=True,exist_ok=True)
-with httpx.Client(timeout=260) as client:
-    joined=client.post(base+"/api/join",json={"world_id":room,"name":"AI验收"}).json()
+access=json.loads(Path(os.environ["VOXEL_TEST_ACCESS_FILE"]).read_text(encoding="utf-8")) if os.environ.get("VOXEL_TEST_ACCESS_FILE") else {}
+verify=ssl.create_default_context(cafile=os.environ["VOXEL_TEST_CA"]) if os.environ.get("VOXEL_TEST_CA") else True
+with httpx.Client(timeout=260,verify=verify,trust_env=False) as client:
+    joined=client.post(base+"/api/join",json={"world_id":room,"name":"AI验收",**({"access_code":access["invite_code"]} if access else {})}).json()
     headers={"Authorization":"Bearer "+joined["token"]}
     def request(text, selection):
         response=client.post(base+"/api/chat",headers=headers,json={"request_id":"live-"+str(time.time_ns()),"text":text,"selection":selection})

@@ -9,11 +9,13 @@ from PIL import Image
 from collections import Counter
 
 ROOT=Path(__file__).resolve().parents[1]
-OUTPUT=ROOT / "artifacts/acceptance"
+OUTPUT=Path(os.environ.get("VOXEL_TEST_OUTPUT", str(ROOT / "artifacts/acceptance")))
 OUTPUT.mkdir(parents=True,exist_ok=True)
 ROOM="web-check-"+str(int(time.time()))
 sys.stdout.reconfigure(encoding="utf-8")
 LAN=os.environ.get("VOXEL_TEST_LAN_URL","https://192.168.101.243:8766")
+BASE=os.environ.get("VOXEL_TEST_BASE_URL","http://127.0.0.1:8765")
+ACCESS=json.loads(Path(os.environ["VOXEL_TEST_ACCESS_FILE"]).read_text(encoding="utf-8")) if os.environ.get("VOXEL_TEST_ACCESS_FILE") else {}
 logs=[]
 with sync_playwright() as p:
     browser=p.chromium.launch(headless=True,args=["--disable-background-timer-throttling","--disable-renderer-backgrounding","--use-angle=d3d11"])
@@ -23,9 +25,12 @@ with sync_playwright() as p:
     for i,context in enumerate(contexts):
         page=context.new_page();page.on("pageerror",lambda err:logs.append(str(err)))
         page.on("console",lambda msg:logs.append(msg.text) if msg.type=="error" else None)
-        page.goto("http://127.0.0.1:8765" if i==0 else LAN,wait_until="networkidle",timeout=120000)
+        page.goto(BASE if i==0 else LAN,wait_until="networkidle",timeout=180000)
         page.wait_for_function("window.voxelReady===true",timeout=120000)
-        page.fill("#room",ROOM);page.fill("#name",f"验收玩家{i+1}");page.click("#join")
+        page.fill("#room",ROOM);page.fill("#name",f"验收玩家{i+1}")
+        if ACCESS:
+            page.fill("#access-code",ACCESS["invite_code"])
+        page.click("#join")
         page.wait_for_function("window.voxelApp.session!==null && window.voxelApp.state.players.length>=1")
         pages.append(page)
     a,b=pages
@@ -65,7 +70,10 @@ with sync_playwright() as p:
     b.wait_for_function("Object.values(window.voxelApp.state.entities)[0].revision===3")
     denied=b.evaluate("""async entity=>await window.voxelApp.command('building.destroy',{entity_id:entity.id,expected_entity_revision:2}).then(x=>x).catch(e=>({error:e.message}))""",entity)
     assert "error" in denied and len(b.evaluate("Object.keys(window.voxelApp.state.entities)"))==1
-    b.reload(wait_until="networkidle");b.wait_for_function("window.voxelReady===true");b.click("#join")
+    b.evaluate('window.voxelRuntimeCache.flush()')
+    refresh_started=time.perf_counter();b.reload(wait_until="networkidle",timeout=180000);b.wait_for_function("window.voxelReady===true && window.voxelApp.synchronized",timeout=120000)
+    refresh_ms=round((time.perf_counter()-refresh_started)*1000)
+    resource_timing=b.evaluate("performance.getEntriesByType('resource').filter(x=>/\\.(wasm|pck)$/.test(x.name)).map(x=>({name:x.name,transferSize:x.transferSize,encodedBodySize:x.encodedBodySize,duration:x.duration}))")
     b.wait_for_function("Object.keys(window.voxelApp.state.entities).length===1")
     assert a.evaluate("window.voxelApp.state.seq")==b.evaluate("window.voxelApp.state.seq")
     a.wait_for_timeout(600)
@@ -101,7 +109,7 @@ with sync_playwright() as p:
     a.evaluate("entity=>window.voxelSelect({entity_id:entity.id,revision:entity.revision,position:entity.position})",survivor)
     a.click("#demolish");a.wait_for_function("Object.keys(window.voxelApp.state.entities).length===0")
     b.wait_for_function("Object.keys(window.voxelApp.state.entities).length===0")
-    summary={"room":ROOM,"two_independent_clients":True,"client_urls":["http://127.0.0.1:8765",LAN],"create":True,"single_voxel_color":True,"flat_rgb_pixel_counts_with_1_byte_tolerance":color_counts,"custom_shape_import_update":True,"canvas_picking":True,"chat_input_does_not_move_camera":True,"actual_deepseek_chat_ui":True,"destroy_and_demolish":True,"ownership_rejection":True,"refresh_reconnect":True,"metrics":metrics,"gpu":renderer,"browser":browser.version,"console_errors":logs}
+    summary={"refresh_to_ready_ms":refresh_ms,"refresh_runtime_resources":resource_timing,"room":ROOM,"two_independent_clients":True,"client_urls":[BASE,LAN],"create":True,"single_voxel_color":True,"flat_rgb_pixel_counts_with_1_byte_tolerance":color_counts,"custom_shape_import_update":True,"canvas_picking":True,"chat_input_does_not_move_camera":True,"actual_deepseek_chat_ui":True,"destroy_and_demolish":True,"ownership_rejection":True,"refresh_reconnect":True,"metrics":metrics,"gpu":renderer,"browser":browser.version,"console_errors":logs}
     (OUTPUT / "browser-smoke.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
     print(json.dumps(summary,ensure_ascii=False),flush=True)
     browser.close()

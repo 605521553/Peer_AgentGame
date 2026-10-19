@@ -1,0 +1,29 @@
+{
+  "runtime_cache_on_refresh": {
+    "hits": 2,
+    "misses": 0,
+    "writes": 0,
+    "failures": 0
+  },
+  "runtime_network_bytes_on_refresh": 0,
+  "unchanged_building_not_rebuilt_on_resync": true,
+  "explicit_logout": true,
+  "url": "https://140.143.163.231",
+  "room": "sync-1792060515",
+  "automatic_login": true,
+  "same_identity_no_new_slot": true,
+  "camera_restored": true,
+  "refresh_model_downloads": 0,
+  "refresh_initial_snapshots": 1,
+  "refresh_to_rendered_ms": 1949,
+  "single_voxel_patch_bytes": 484,
+  "no_full_model_in_patch": true,
+  "same_model_instance_reused": true,
+  "offline_deletion_recovered": true,
+  "corrupt_cache_recovered": true,
+  "unavailable_indexeddb_fallback": true,
+  "invalid_session_shows_login": true,
+  "page_errors": [],
+  "physical_devices": 1,
+  "browser_contexts": 2
+}

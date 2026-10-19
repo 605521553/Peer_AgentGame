@@ -1,0 +1,21 @@
+{
+  "server/backend/.gdignore": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "server/backend/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "server/backend/ai.py": "978e64ed42bf5dcd00cc59e655306f65f4e470f893fd92cbc03ab9ee48db6602",
+  "server/backend/app.py": "ecafc375d7e299ac53ee8cc44b213ef027fea1b698e9f97edac50c858c242b95",
+  "server/backend/config.py": "d3f75a4f08224aaa5c3b87f27a1e19e27fff4162de4f37768ffe03d4503c00cb",
+  "server/backend/models.py": "e374febdc804a9e1b1473438c4c3901679e8d6884b85c09304a0010633f5a941",
+  "server/backend/run.py": "1d20050600a0fa1e3e194a75a0c950710e4b70413878f2b296bffefa819e4ee1",
+  "server/backend/server.env.example": "55f5851860b8dc9b054be790c865dfd326f8945e82e0201316541d6aa57ff0f1",
+  "server/backend/store.py": "2bbcd621e415df1b7cc6e24e84c567a7ea9d2f3f2c20f98af75ce90834eafdb6",
+  "server/backend/transport.py": "e3544bef497f76a6198844ff9eb723d1043f978f57a4b16f136a3eb156367dd7",
+  "server/requirements.txt": "5d4f620423eca0d08807d7707a680f97860fec33ca2657d5b0233cdc8619f1cd",
+  "protocol/README.md": "17cc8d02ee419e9f2f1ebac6146f655f8ffdc44cdabedddce1e153942da683d6",
+  "protocol/rules.json": "890a8885cc3155c4a4298177e0ed90768b2b8761542eb0f1571726d7d71db61a",
+  "deploy/backup.py": "0ce10748736d00be5b62384f0f340f33cea63df088805ab26753c4e28bb6bfe6",
+  "deploy/install.sh": "4c4423eababdb092d42b18400b5f5934093c35eae84c2696eaabfebbfa9c3029",
+  "deploy/nginx-ip.conf": "b76797a1d765ca703e3d26219e079a8ff5918786dd59cbd14fbf72027e5b2de4",
+  "deploy/voxel-kingdom-backup.service": "26440c146cccb037e23a54a2b1af400f5b0d48438b87671adfd4b2f02349a46a",
+  "deploy/voxel-kingdom-backup.timer": "79302af0ade547d5d692929b99ec87e9b7132914a3d19afdd7861eae241f256d",
+  "deploy/voxel-kingdom.service": "9fe7faa5ae46f79cd0ae689e1419b168bf4df927a80e6c65ea93ceded91bd380"
+}

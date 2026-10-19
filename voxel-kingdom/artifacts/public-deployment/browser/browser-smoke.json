@@ -1,0 +1,46 @@
+{
+  "room": "web-check-1792053300",
+  "two_independent_clients": true,
+  "client_urls": [
+    "https://140.143.163.231",
+    "https://140.143.163.231"
+  ],
+  "create": true,
+  "single_voxel_color": true,
+  "flat_rgb_pixel_counts_with_1_byte_tolerance": {
+    "8D969C": 65871,
+    "315CC0": 14722,
+    "D8B978": 1355,
+    "A94136": 11933,
+    "FF00CC": 238
+  },
+  "custom_shape_import_update": true,
+  "canvas_picking": true,
+  "chat_input_does_not_move_camera": true,
+  "actual_deepseek_chat_ui": true,
+  "destroy_and_demolish": true,
+  "ownership_rejection": true,
+  "refresh_reconnect": true,
+  "metrics": {
+    "camera_size": 50.575,
+    "camera_target": [
+      32,
+      1,
+      32
+    ],
+    "camera_yaw_deg": -22.5,
+    "draw_calls": 37,
+    "fps": 54,
+    "frame_p95_ms": 16.6666666666667,
+    "memory_mb": null,
+    "mesh_build_ms": 0.4,
+    "queue": 0,
+    "rendered": 2,
+    "renderer": "gl_compatibility",
+    "seq": 6,
+    "triangles": 1814
+  },
+  "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 770 (0x00004680) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "browser": "153.0.8010.12",
+  "console_errors": []
+}

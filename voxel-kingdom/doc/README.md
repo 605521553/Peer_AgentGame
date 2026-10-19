@@ -1,6 +1,6 @@
 # Voxel Kingdom 文档索引
 
-> 更新：2026-10-13 · 当前阶段：第一阶段本机与局域网版本已实施，验收见完成报告。
+> 更新：2026-10-15 · 第一阶段本机/局域网版本已实施，已追加公网 IP HTTPS/WSS 部署。
 
 | 范围 | 玩法文档 | 技术文档 |
 | --- | --- | --- |
@@ -20,3 +20,14 @@
 - [运行与接口说明](stage-01-operation.md)
 
 - [项目启动说明](../README.md)
+
+## 公网 IP 部署补充
+
+- [逐批修改与结果记录](public-ip-deployment-log.md)
+- [公网使用与维护](public-ip-operation.md)
+- [公网完成情况与验收报告](public-ip-acceptance-report.md)
+- [刷新登录恢复与场景缓存分析](refresh-session-cache-analysis.md)
+- [体素传输格式与数据量分析](voxel-protocol-size-analysis.md)
+- [会话恢复、传输优化与分项目实施方案](session-sync-project-plan.md)
+- [自动恢复与同步优化逐批实施记录](session-sync-implementation-log.md)
+- [自动恢复、同步优化与分项目验收报告](session-sync-completion-report.md)

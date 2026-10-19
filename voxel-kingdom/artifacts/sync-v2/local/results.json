@@ -1,0 +1,20 @@
+{
+  "url": "http://127.0.0.1:8775",
+  "room": "sync-1792058727",
+  "automatic_login": true,
+  "same_identity_no_new_slot": true,
+  "camera_restored": true,
+  "refresh_model_downloads": 0,
+  "refresh_initial_snapshots": 1,
+  "refresh_to_rendered_ms": 1486,
+  "single_voxel_patch_bytes": 484,
+  "no_full_model_in_patch": true,
+  "same_model_instance_reused": true,
+  "offline_deletion_recovered": true,
+  "corrupt_cache_recovered": true,
+  "unavailable_indexeddb_fallback": true,
+  "invalid_session_shows_login": true,
+  "page_errors": [],
+  "physical_devices": 1,
+  "browser_contexts": 2
+}

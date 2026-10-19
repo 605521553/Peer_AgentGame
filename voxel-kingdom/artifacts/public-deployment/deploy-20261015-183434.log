@@ -1,0 +1,10 @@
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+{"ok":true,"rules_version":"stage-01-v1","ai_configured":true,"model":"deepseek-v4-pro","invite_required":true,"protocol_versions":[1,2]}
+Existing site HTTP: 200
+MainPID=411753
+MemoryCurrent=40865792
+ActiveState=active
+
+Component deployed: client / 20261015-183434

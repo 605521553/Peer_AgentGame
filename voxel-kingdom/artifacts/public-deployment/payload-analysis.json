@@ -1,0 +1,35 @@
+{
+  "measurement": "UTF-8 compact JSON; gzip offline comparison only; excludes protocol/TLS headers; sample castle matches current web sampleCastle fixture",
+  "models": [
+    {
+      "model": "sample_castle",
+      "voxels": 790,
+      "input_bytes": 1079,
+      "canonical_cells_bytes": 8612,
+      "canonical_cells_gzip_bytes": 1931,
+      "normalized_asset_bytes": 8723,
+      "lossless_boxes_bytes": 1572,
+      "lossless_boxes_gzip_bytes": 359
+    },
+    {
+      "model": "ai_castle",
+      "voxels": 198,
+      "input_bytes": 2148,
+      "canonical_cells_bytes": 2148,
+      "canonical_cells_gzip_bytes": 552,
+      "normalized_asset_bytes": 2258,
+      "lossless_boxes_bytes": 1136,
+      "lossless_boxes_gzip_bytes": 285
+    },
+    {
+      "model": "solid_20_cube",
+      "voxels": 8000,
+      "input_bytes": 183,
+      "canonical_cells_bytes": 92114,
+      "canonical_cells_gzip_bytes": 18319,
+      "normalized_asset_bytes": 92226,
+      "lossless_boxes_bytes": 183,
+      "lossless_boxes_gzip_bytes": 166
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[Unit]
+Description=Voxel Kingdom consistent SQLite backup
+After=voxel-kingdom.service
+
+[Service]
+Type=oneshot
+User=voxel-kingdom
+Group=voxel-kingdom
+UMask=0077
+ExecStart=/opt/voxel-kingdom/venv/bin/python /opt/voxel-kingdom/server-current/deploy/backup.py
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/voxel-kingdom

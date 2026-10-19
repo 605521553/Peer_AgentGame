@@ -1,0 +1,29 @@
+Looking in indexes: http://mirrors.tencentyun.com/pypi/simple
+Requirement already satisfied: fastapi==0.143.0 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from -r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 1)) (0.143.0)
+Requirement already satisfied: uvicorn==0.54.0 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from -r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 2)) (0.54.0)
+Requirement already satisfied: httpx==0.28.1 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from -r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 3)) (0.28.1)
+Requirement already satisfied: websockets==17.2 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from -r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 4)) (17.2)
+Requirement already satisfied: cryptography==50.0.2 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from -r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 5)) (50.0.2)
+Requirement already satisfied: starlette>=0.46.0 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 1)) (1.8.0)
+Requirement already satisfied: pydantic>=2.9.0 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 1)) (2.14.1)
+Requirement already satisfied: typing-extensions>=4.8.0 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 1)) (4.16.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 1)) (0.4.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 1)) (0.0.5)
+Requirement already satisfied: opentelemetry-api>=1.44.0 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 1)) (1.45.1)
+Requirement already satisfied: click>=7.0 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from uvicorn==0.54.0->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 2)) (8.5.0)
+Requirement already satisfied: h11>=0.8 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from uvicorn==0.54.0->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 2)) (0.16.0)
+Requirement already satisfied: anyio in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from httpx==0.28.1->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 3)) (4.15.1)
+Requirement already satisfied: certifi in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from httpx==0.28.1->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 3)) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from httpx==0.28.1->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 3)) (1.0.9)
+Requirement already satisfied: idna in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from httpx==0.28.1->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 3)) (3.20)
+Requirement already satisfied: cffi>=2.0.0 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from cryptography==50.0.2->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 5)) (2.1.1)
+Requirement already satisfied: pycparser in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from cffi>=2.0.0->cryptography==50.0.2->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 5)) (3.11)
+Requirement already satisfied: annotated-types>=0.6.0 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from pydantic>=2.9.0->fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 1)) (0.8.0)
+Requirement already satisfied: pydantic-core==2.50.1 in /opt/voxel-kingdom/venv/lib/python3.12/site-packages (from pydantic>=2.9.0->fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-181900/server/requirements.txt (line 1)) (2.50.1)
+{"ok":true,"rules_version":"stage-01-v1","ai_configured":true,"model":"deepseek-v4-pro","invite_required":true,"protocol_versions":[1,2]}{"ok":true,"rules_version":"stage-01-v1","ai_configured":true,"model":"deepseek-v4-pro","invite_required":true,"protocol_versions":[1,2]}
+Existing site HTTP: 200
+MainPID=411753
+MemoryCurrent=36286464
+ActiveState=active
+
+Component deployed: server / 20261015-181900

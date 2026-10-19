@@ -1,0 +1,32 @@
+[Unit]
+Description=Voxel Kingdom authoritative game server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=voxel-kingdom
+Group=voxel-kingdom
+WorkingDirectory=/opt/voxel-kingdom/server-current/server
+EnvironmentFile=/etc/voxel-kingdom/server.env
+Environment=VOXEL_DATA_DIR=/var/lib/voxel-kingdom
+Environment=VOXEL_CLIENT_ROOT=/opt/voxel-kingdom/client-current
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/voxel-kingdom/venv/bin/python -m uvicorn backend.app:app --host 127.0.0.1 --port 8765 --workers 1 --proxy-headers --forwarded-allow-ips 127.0.0.1 --ws-max-size 16384 --ws-max-queue 16 --timeout-graceful-shutdown 30
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=40
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/voxel-kingdom
+MemoryHigh=384M
+MemoryMax=640M
+CPUQuota=150%
+TasksMax=64
+
+[Install]
+WantedBy=multi-user.target

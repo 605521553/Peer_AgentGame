@@ -1,0 +1,8 @@
+{
+  "release": "20261015-181658",
+  "component": "all",
+  "backend_pid_before": "388688",
+  "backend_pid_after": "410974",
+  "client_release_before": "",
+  "client_release_after": "/opt/voxel-kingdom/releases/20261015-181658"
+}

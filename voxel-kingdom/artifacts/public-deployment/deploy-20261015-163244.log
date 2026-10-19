@@ -1,0 +1,140 @@
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 88215 files and directories currently installed.)
+Preparing to unpack .../python3-minimal_3.12.3-0ubuntu2.1_amd64.deb ...
+Unpacking python3-minimal (3.12.3-0ubuntu2.1) over (3.12.3-0ubuntu1) ...
+Setting up python3-minimal (3.12.3-0ubuntu2.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 88215 files and directories currently installed.)
+Preparing to unpack .../00-python3_3.12.3-0ubuntu2.1_amd64.deb ...
+Unpacking python3 (3.12.3-0ubuntu2.1) over (3.12.3-0ubuntu1) ...
+Preparing to unpack .../01-libpython3.12t64_3.12.3-1ubuntu0.17_amd64.deb ...
+Unpacking libpython3.12t64:amd64 (3.12.3-1ubuntu0.17) over (3.12.3-1ubuntu0.3) ...
+Preparing to unpack .../02-python3.12_3.12.3-1ubuntu0.17_amd64.deb ...
+Unpacking python3.12 (3.12.3-1ubuntu0.17) over (3.12.3-1ubuntu0.3) ...
+Preparing to unpack .../03-libpython3.12-stdlib_3.12.3-1ubuntu0.17_amd64.deb ...
+Unpacking libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) over (3.12.3-1ubuntu0.3) ...
+Preparing to unpack .../04-python3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...
+Unpacking python3.12-minimal (3.12.3-1ubuntu0.17) over (3.12.3-1ubuntu0.3) ...
+Preparing to unpack .../05-libpython3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...
+Unpacking libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) over (3.12.3-1ubuntu0.3) ...
+Preparing to unpack .../06-libpython3-stdlib_3.12.3-0ubuntu2.1_amd64.deb ...
+Unpacking libpython3-stdlib:amd64 (3.12.3-0ubuntu2.1) over (3.12.3-0ubuntu1) ...
+Preparing to unpack .../07-python3-setuptools_68.1.2-2ubuntu1.2_all.deb ...
+Unpacking python3-setuptools (68.1.2-2ubuntu1.2) over (68.1.2-2ubuntu1.1) ...
+Preparing to unpack .../08-python3-pkg-resources_68.1.2-2ubuntu1.2_all.deb ...
+Unpacking python3-pkg-resources (68.1.2-2ubuntu1.2) over (68.1.2-2ubuntu1.1) ...
+Selecting previously unselected package python3-pip-whl.
+Preparing to unpack .../09-python3-pip-whl_24.0+dfsg-1ubuntu1.3_all.deb ...
+Unpacking python3-pip-whl (24.0+dfsg-1ubuntu1.3) ...
+Selecting previously unselected package python3-setuptools-whl.
+Preparing to unpack .../10-python3-setuptools-whl_68.1.2-2ubuntu1.2_all.deb ...
+Unpacking python3-setuptools-whl (68.1.2-2ubuntu1.2) ...
+Selecting previously unselected package python3.12-venv.
+Preparing to unpack .../11-python3.12-venv_3.12.3-1ubuntu0.17_amd64.deb ...
+Unpacking python3.12-venv (3.12.3-1ubuntu0.17) ...
+Selecting previously unselected package python3-venv.
+Preparing to unpack .../12-python3-venv_3.12.3-0ubuntu2.1_amd64.deb ...
+Unpacking python3-venv (3.12.3-0ubuntu2.1) ...
+Setting up python3-setuptools-whl (68.1.2-2ubuntu1.2) ...
+Setting up python3-pip-whl (24.0+dfsg-1ubuntu1.3) ...
+Setting up libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...
+Setting up python3.12-minimal (3.12.3-1ubuntu0.17) ...
+Setting up libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...
+Setting up python3.12 (3.12.3-1ubuntu0.17) ...
+Setting up libpython3.12t64:amd64 (3.12.3-1ubuntu0.17) ...
+Setting up libpython3-stdlib:amd64 (3.12.3-0ubuntu2.1) ...
+Setting up python3.12-venv (3.12.3-1ubuntu0.17) ...
+Setting up python3 (3.12.3-0ubuntu2.1) ...
+Setting up python3-venv (3.12.3-0ubuntu2.1) ...
+Setting up python3-pkg-resources (68.1.2-2ubuntu1.2) ...
+Setting up python3-setuptools (68.1.2-2ubuntu1.2) ...
+Processing triggers for systemd (255.4-1ubuntu8) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.2) ...
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart networkd-dispatcher.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Looking in indexes: http://mirrors.tencentyun.com/pypi/simple
+Collecting fastapi==0.143.0 (from -r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 1))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/bd/f4/27e386913417ad32aae42bba48b0c0cce40e9ff2fba1a871ca2702c37324/fastapi-0.143.0-py3-none-any.whl (144 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.7/144.7 kB 8.6 MB/s eta 0:00:00
+Collecting uvicorn==0.54.0 (from -r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 2))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/38/0c/b54a4fdd7f90a3af8b02ebc9ce6712c2c208b7926a2f7bad95c33ebbe943/uvicorn-0.54.0-py3-none-any.whl (87 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.4/87.4 kB 7.6 MB/s eta 0:00:00
+Collecting httpx==0.28.1 (from -r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 3))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/2a/39/e50c7c3a983047577ee07d2a9e53faf5a69493943ec3f6a384bdc792deb2/httpx-0.28.1-py3-none-any.whl (73 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 7.2 MB/s eta 0:00:00
+Collecting websockets==17.2 (from -r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 4))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/03/c0/a6d8be9c43e4456fb9597fdf8b5e0ce1f0a5df41503acce6d869536e4e23/websockets-17.2-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (225 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 225.3/225.3 kB 18.5 MB/s eta 0:00:00
+Collecting cryptography==50.0.2 (from -r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 5))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/d3/69/2c833a049475e0a3444e94c7d0aca0aa51d166374a449b09e92ac98138de/cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 72.0 MB/s eta 0:00:00
+Collecting starlette>=0.46.0 (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 1))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/c1/b0/5742e4ac7af5eb58ec3470a537a49d7aa507e5539413e504b3a65ef50ba8/starlette-1.8.0-py3-none-any.whl (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.6/79.6 kB 9.4 MB/s eta 0:00:00
+Collecting pydantic>=2.9.0 (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 1))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/35/ea/a56b9fe5066f3537b7882f77e9c5dfb26d8c2eefdaed9b5fc73d57b4dc22/pydantic-2.14.1-py3-none-any.whl (488 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 488.1/488.1 kB 30.9 MB/s eta 0:00:00
+Collecting typing-extensions>=4.8.0 (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 1))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 5.3 MB/s eta 0:00:00
+Collecting typing-inspection>=0.4.2 (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 1))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/67/81/4add07e5172b7ac40d8ed5ff580409a7801a4fe26d529bdd915401dabfbe/typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 1))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Collecting opentelemetry-api>=1.44.0 (from fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 1))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/1e/41/f7dcf80b81ee8e71c1a2b59f14208bc723edbd89ed027a73b175abf6348e/opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 5.0 MB/s eta 0:00:00
+Collecting click>=7.0 (from uvicorn==0.54.0->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 2))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl (125 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 14.9 MB/s eta 0:00:00
+Collecting h11>=0.8 (from uvicorn==0.54.0->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 2))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl (37 kB)
+Collecting anyio (from httpx==0.28.1->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 3))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 12.7 MB/s eta 0:00:00
+Collecting certifi (from httpx==0.28.1->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 3))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl (136 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.0/137.0 kB 11.5 MB/s eta 0:00:00
+Collecting httpcore==1.* (from httpx==0.28.1->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 3))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/7e/f5/f66802a942d491edb555dd61e3a9961140fd64c90bce1eafd741609d334d/httpcore-1.0.9-py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 7.2 MB/s eta 0:00:00
+Collecting idna (from httpx==0.28.1->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 3))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl (69 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 8.6 MB/s eta 0:00:00
+Collecting cffi>=2.0.0 (from cryptography==50.0.2->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 5))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/b1/db/dceb9dd5b231e1da801793f8acc9f3c52a7e1afe40bb1aae37e02b0faad5/cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 221.8/221.8 kB 20.9 MB/s eta 0:00:00
+Collecting pycparser (from cffi>=2.0.0->cryptography==50.0.2->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 5))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/90/11/0e6f11117525ff0eec40ebac3d313376f102df93ca44ad9e893ee85e4f89/pycparser-3.11-py3-none-any.whl (51 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.2/51.2 kB 5.5 MB/s eta 0:00:00
+Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 1))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/99/91/8acff4f5e50511b911bbccb72b8628a49c68ce14148cd9f6431094859a90/annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Collecting pydantic-core==2.50.1 (from pydantic>=2.9.0->fastapi==0.143.0->-r /opt/voxel-kingdom/releases/20261015-163244/backend/requirements.txt (line 1))
+  Downloading http://mirrors.tencentyun.com/pypi/packages/90/24/48cd98388e4ac2c08d0800af36d15413db15e20387f1038123a2c86cb2f6/pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 44.1 MB/s eta 0:00:00
+Installing collected packages: websockets, typing-extensions, pycparser, idna, h11, click, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, pydantic-core, opentelemetry-api, httpcore, cffi, anyio, starlette, pydantic, httpx, cryptography, fastapi
+Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.7.22 cffi-2.1.1 click-8.5.0 cryptography-50.0.2 fastapi-0.143.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 opentelemetry-api-1.45.1 pycparser-3.11 pydantic-2.14.1 pydantic-core-2.50.1 starlette-1.8.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0 websockets-17.2
+Created symlink /etc/systemd/system/multi-user.target.wants/voxel-kingdom.service → /etc/systemd/system/voxel-kingdom.service.
+curl: (7) Failed to connect to 127.0.0.1 port 8765 after 0 ms: Couldn't connect to server
+{"ok":true,"rules_version":"stage-01-v1","ai_configured":true,"model":"deepseek-v4-pro","invite_required":true}nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+Created symlink /etc/systemd/system/timers.target.wants/voxel-kingdom-backup.timer → /etc/systemd/system/voxel-kingdom-backup.timer.
+{"ok":true,"rules_version":"stage-01-v1","ai_configured":true,"model":"deepseek-v4-pro","invite_required":true}
+Existing site HTTP: 200
+sha256 Fingerprint=A3:C0:0F:EF:0B:03:87:ED:27:8D:26:4C:68:C5:49:1E:65:3B:36:D9:D0:16:FF:96:82:03:7D:0D:09:86:CF:C5
+notBefore=Oct 15 08:33:39 2026 GMT
+notAfter=Oct 15 08:33:39 2027 GMT
+MainPID=386093
+MemoryCurrent=36524032
+ActiveState=active

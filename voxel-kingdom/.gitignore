@@ -4,6 +4,8 @@
 /.venv/
 /build/
 /backend/data/
+/server/.venv/
+/server/backend/data/
 /artifacts/runtime/
 __pycache__/
 .pytest_cache/
