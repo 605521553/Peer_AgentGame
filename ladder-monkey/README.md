@@ -16,7 +16,31 @@ Windows 64 位发行版为 `dist/LadderMonkey.exe`，游戏资源已经内置，
 | S（按住） | 向下交替攀爬 |
 | Space（单次） | 安全收尾，转身、拉眼角、眨眼吐舌，再回到梯子 |
 
-同时按 W/S 保持停止意图。松键、反向和 Space 都会先完成当前换档，保证回到有支撑的姿态。鬼脸过程中重复按 Space 不会叠加；结束后会重新读取 W/S。上下边界自动停止。游戏没有操作面板或鼠标交互。
+同时按 W/S 保持停止意图。松键、反向和 Space 都会先完成当前换档，保证回到有支撑的姿态。鬼脸过程中重复按 Space 不会叠加；结束后会重新读取 W/S。上下边界自动停止。游戏仅在获得奖杯时显示成就提示，不需要鼠标或额外按键。
+
+## 攀爬成就奖杯
+
+默认第一个金色奖杯位于 **3.1 米**，之后每隔 **2.1 米**一枚，当前梯子共有 6 枚。奖杯在玩家前方一定距离内生成，在梯子中央缓慢旋转和轻微浮动。猴子的身体或头部碰到奖杯后，奖杯立即停止、拆成原有杯壁、把手、杯底和底座等 **24 块**刚体碎片。收集区域跟随最终骨盆及头部骨骼，防止大头模型穿过奖杯后才触发。
+
+碎片带有向外及向上的初速度和随机角速度，会因重力下落，与横档、梯柱、地面及树冠平台发生碰撞和弹跳。默认 5 秒后回收，末尾 0.45 秒逐渐缩小，同时最多保留 96 个碎片。碎片只与专用场景碰撞层交互，不影响猴子的支撑、IK 或攀爬控制，也不会挡住其他奖杯的收集检测。
+
+收集后出现「成就达成！」及奖杯对应名称。提示在 384×288 低分辨率画面内绘制，使用像素奖杯图标和内置中文字体，由 Tween 从屏幕下方滑入，停留 2.4 秒后滑出。连续收集会进入队列，每次只显示一个提示。
+
+每枚奖杯在**本次游戏运行中只能收集一次**；下降或重新经过原高度不会再次生成。重启游戏会开始新一轮收集，没有新增存档或额外操作按键。
+
+参数统一放在 `resources/achievement_profile.tres`：起始高度、间距、提前生成距离、旋转速度、浮动、收集半径、成就名称、碎片数量、爆发速度、角速度、弹性、清理时间、碎片上限及 Toast 进出和停留时长均可在检查器修改。
+
+模块分工：
+
+| 文件 | 职责 |
+|---|---|
+| `scripts/achievements/achievement_manager.gd` | 高度生成、收集去重、跟随最终骨盆的躯干触发器及碎片专用场景碰撞体 |
+| `scripts/achievements/trophy_model.gd` | 中空低多边形金杯及预分片模型，完整奖杯与碎片共用网格 |
+| `scripts/achievements/trophy_pickup.gd` | Area3D 触碰、旋转浮动、原子式收集锁定 |
+| `scripts/achievements/trophy_debris.gd` | RigidBody3D、凸包形状、随机速度、碰撞弹跳及数量/寿命回收 |
+| `scripts/achievements/achievement_toast.gd`、`trophy_icon.gd` | 中文提示、像素图标、Tween 动画、FIFO 队列及重复提示过滤 |
+
+物理层 4 为碎片场景、5 为金色碎片、6 为猴子身体收集区域、7 为奖杯检测区域。奖杯使用 Area3D 的真实重叠信号，不是单纯比较角色高度。骨骼完成求解后更新躯干区域；物理查询结束后再创建碎片，避免在物理回调中修改碰撞形状。
 
 ## 角色与动作
 
@@ -78,14 +102,18 @@ $monkeyProject = 'D:\Godot4.7.2\Projects\ladder-monkey'
 & $godotExe --headless --path $monkeyProject --fixed-fps 30 -- --verify --report-fps=30
 & $godotExe --headless --path $monkeyProject --fixed-fps 120 -- --verify --report-fps=120
 & $godotExe --path $monkeyProject --fixed-fps 60 -- --capture
+& $godotExe --headless --path $monkeyProject --fixed-fps 60 -- --verify-rewards
+& $godotExe --path $monkeyProject --fixed-fps 60 -- --capture-rewards
 ```
 
 `--verify` 注入 W/S/Space 物理键事件，覆盖连续上下爬、松键、途中反向、攀爬中 Space、表演中重复 Space、顶部与底部边界和底部鬼脸。任一关键约束失败时进程以 1 退出，成功以 0 退出。
 
 报告保存到 `artifacts/verification*.json`。自动检查包含：七状态覆盖、接触点与 IK 末端误差、骨段长度不变、至少两个攀爬支撑点、鬼脸三点支撑、左右档差不超过一档、待机高度不漂移、根节点不动及网格权重正常。
 
+完整攀爬验证同时检查六枚真实触碰奖杯全部收集、碎片产生与清理、刚体场景碰撞及六次成就提示完成。`--verify-rewards` 另验证实际飞行/重力/自转、重复经过不重收、同时触碰三枚奖杯时提示排队且不重叠，以及碎片上限生效和全部回收；报告为 `artifacts/reward_verification.json`。`--capture-rewards` 保存 `05_trophy_waiting.png` 至 `08_toast_queue.png`。
+
 `--capture` 生成待机、上爬、下爬和鬼脸的四张实际 3D 渲染图（最近邻放大）。图片位于 `artifacts/01_idle.png` 到 `04_taunt.png`。图片来自 3D 子视口，窗口另施加色阶和抖动后处理。
 
 此实现使用运动学支撑约束与程序化骨骼动画。没有接触力动力学或全身刚体仿真。数值验证证明落点和骨段约束，动作观感则另经实际渲染检查；大幅调整角色比例或梯子间距后应重新运行验证。
 
-所有角色和场景几何均在本项目原创生成，没有外部模型、贴图或网络依赖。
+所有角色、奖杯和场景几何均在本项目原创生成，没有外部模型或贴图。中文提示字体按 OFL 许可内置，见 `ASSET_LICENSE.md`。游戏运行没有网络依赖。

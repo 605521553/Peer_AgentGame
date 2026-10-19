@@ -1,0 +1,8 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 595.79 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 3050
+
+CAPTURE 05_trophy_waiting
+CAPTURE 06_trophy_burst
+CAPTURE 07_achievement_toast
+CAPTURE 08_toast_queue
+REWARD_VERIFICATION {"cleaned_shards":96,"errors":[],"flight_observed":true,"gravity_observed":true,"passed":true,"peak_active_shards_with_limit_32":32,"peak_pending_toasts":2,"peak_simultaneous_toasts":1,"physical_collisions":240,"real_collection_ids":[0,100,101,102],"simulation_seconds":22.75,"spawned_shards":96,"spin_observed":true,"toast_order":[0,100,101,102]}

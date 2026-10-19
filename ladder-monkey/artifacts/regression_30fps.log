@@ -1,0 +1,19 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+VERIFY initial_idle
+VERIFY continuous_up
+VERIFY release_up
+VERIFY continuous_down
+VERIFY release_down
+VERIFY reverse_mid_reach
+VERIFY reverse_to_down
+VERIFY reverse_to_up
+VERIFY settle_reversal
+VERIFY taunt_during_step
+VERIFY queued_taunt
+VERIFY top_boundary
+VERIFY top_idle
+VERIFY bottom_boundary
+VERIFY bottom_idle
+VERIFY taunt_at_bottom
+VERIFICATION_RESULT {"achievements":{"collected":6,"fragments_cleaned":144,"fragments_spawned":144,"planned":6,"scenery_collisions":634,"toasts_finished":6},"blended_vertices":2540,"bones":49,"engine":"4.7.2-stable (official)","errors":[],"half_steps":124,"ik":{"LF":{"max_endpoint_error_m":0.000000044703483581543,"max_planted_error_m":0.0000000298023223876953,"max_segment_length_error_m":0.000000894069671630859,"reach_clamps":0,"solves":5075},"LH":{"max_endpoint_error_m":0.000000044703483581543,"max_planted_error_m":0.0000000298023223876953,"max_segment_length_error_m":0.000000596046447753906,"reach_clamps":0,"solves":5075},"RF":{"max_endpoint_error_m":0.0000000596046447753906,"max_planted_error_m":0.0000000596046447753906,"max_segment_length_error_m":0.000000894069671630859,"reach_clamps":0,"solves":5075},"RH":{"max_endpoint_error_m":0.000000044703483581543,"max_planted_error_m":0.0000000298023223876953,"max_segment_length_error_m":0.000000655651092529297,"reach_clamps":0,"solves":5075}},"max_idle_drift_m":0.0,"max_joint_displacement_per_frame_m":0.159041225910187,"max_root_motion":0.0,"max_rung_stagger":1,"max_target_slip_m":0.0,"max_torso_reach_correction_m":0.0684772878885269,"minimum_supports":2,"minimum_taunt_supports":3,"passed":true,"physical_key_events":true,"simulation_seconds":169.158333333326,"states":["ClimbIdle","ClimbUp","ClimbTransition","ClimbDown","TauntTurn","TauntPlay","TauntReturn"],"taunts":2,"vertices":10398}

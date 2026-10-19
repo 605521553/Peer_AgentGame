@@ -7,6 +7,8 @@ var body: MonkeyBodyPose
 var solvers: Array[MonkeyLimbIK] = []
 var viewport: SubViewport
 var camera: MonkeyCamera
+var achievements: MonkeyAchievements
+var achievement_toast: AchievementToast
 
 func _ready() -> void:
 	var args := OS.get_cmdline_user_args()
@@ -61,8 +63,21 @@ func _ready() -> void:
 	camera.name = "FollowCamera"
 	camera.controller = controller
 	world.add_child(camera)
+	achievement_toast = AchievementToast.new()
+	achievement_toast.name = "AchievementOverlay"
+	achievement_toast.profile = preload("res://resources/achievement_profile.tres")
+	viewport.add_child(achievement_toast)
+	achievements = MonkeyAchievements.new()
+	achievements.name = "ClimbAchievements"
+	world.add_child(achievements)
+	achievements.setup(controller, body, ladder, achievement_toast, solvers[-1])
 	if "--verify" in args or "--capture" in args:
 		var harness: Node = load("res://tools/verification.gd").new()
 		harness.game = self
 		harness.capture_only = "--capture" in args
 		add_child(harness)
+	if "--verify-rewards" in args or "--capture-rewards" in args:
+		var rewards_harness: Node = load("res://tools/reward_verification.gd").new()
+		rewards_harness.game = self
+		rewards_harness.capture_images = "--capture-rewards" in args
+		add_child(rewards_harness)

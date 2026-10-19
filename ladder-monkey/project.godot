@@ -26,3 +26,9 @@ environment/defaults/default_clear_color=Color(0.17, 0.25, 0.25, 1)
 climb_up={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":87)]}
 climb_down={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":83)]}
 taunt={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":32)]}
+
+[layer_names]
+3d_physics/layer_4="DebrisScenery"
+3d_physics/layer_5="GoldFragments"
+3d_physics/layer_6="MonkeyRewardProbe"
+3d_physics/layer_7="TrophyPickup"

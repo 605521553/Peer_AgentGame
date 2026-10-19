@@ -1,0 +1,26 @@
+{
+	"cleaned_shards": 96,
+	"errors": [],
+	"flight_observed": true,
+	"gravity_observed": true,
+	"passed": true,
+	"peak_active_shards_with_limit_32": 32,
+	"peak_pending_toasts": 2,
+	"peak_simultaneous_toasts": 1,
+	"physical_collisions": 240,
+	"real_collection_ids": [
+		0,
+		100,
+		101,
+		102
+	],
+	"simulation_seconds": 22.75,
+	"spawned_shards": 96,
+	"spin_observed": true,
+	"toast_order": [
+		0,
+		100,
+		101,
+		102
+	]
+}

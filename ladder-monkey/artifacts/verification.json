@@ -1,4 +1,12 @@
 {
+	"achievements": {
+		"collected": 6,
+		"fragments_cleaned": 144,
+		"fragments_spawned": 144,
+		"planned": 6,
+		"scenery_collisions": 650,
+		"toasts_finished": 6
+	},
 	"blended_vertices": 2540,
 	"bones": 49,
 	"engine": "4.7.2-stable (official)",

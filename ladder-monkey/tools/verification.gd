@@ -162,7 +162,14 @@ func finish_verification() -> void:
 		if w[i + 1] > 0.01:
 			multi_weight += 1
 	check(multi_weight > 500, "Insufficient blended skin vertices")
+	var rewards: MonkeyAchievements = game.achievements
+	check(rewards.collected_ids.size() == rewards.planned_heights.size(), "Height trophies were not all collected by real torso overlaps")
+	check(rewards.debris.spawned_count == rewards.planned_heights.size() * rewards.profile.fragment_count, "A trophy burst was missing or duplicated")
+	check(rewards.debris.active.is_empty(), "Old trophy fragments were not cleaned up")
+	check(rewards.debris.collision_count > 0, "Rigid trophy fragments never collided with scenery")
+	check(game.achievement_toast.finished_ids.size() == rewards.planned_heights.size(), "Toast queue did not finish all climbing achievements")
 	var result := {"engine": Engine.get_version_info().string, "passed": errors.is_empty(), "physical_key_events": true, "simulation_seconds": elapsed, "states": states_seen.keys(), "half_steps": control.completed_steps, "taunts": control.completed_taunts, "minimum_supports": min_supports, "minimum_taunt_supports": min_taunt_supports, "max_root_motion": max_root_motion, "max_target_slip_m": max_target_slip, "max_idle_drift_m": max_idle_drift, "max_rung_stagger": max_rung_stagger, "max_joint_displacement_per_frame_m": max_joint_speed, "max_torso_reach_correction_m": game.body.maximum_reach_correction, "bones": game.rig.skeleton.get_bone_count(), "vertices": arrays[Mesh.ARRAY_VERTEX].size(), "blended_vertices": multi_weight, "ik": chains, "errors": errors}
+	result.achievements = {"planned": rewards.planned_heights.size(), "collected": rewards.collected_ids.size(), "fragments_spawned": rewards.debris.spawned_count, "fragments_cleaned": rewards.debris.cleaned_count, "scenery_collisions": rewards.debris.collision_count, "toasts_finished": game.achievement_toast.finished_ids.size()}
 	var file := FileAccess.open(output_directory + "/verification" + report_suffix + ".json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(result, "\t"))
 	print("VERIFICATION_RESULT ", JSON.stringify(result))

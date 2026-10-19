@@ -9,47 +9,97 @@ Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 [  83% ] [90m[1mfirst_scan_filesystem[22m | 正在启动文件扫描……[39m[0m
 [92m[ DONE ][39m [1mfirst_scan_filesystem[22m
 [0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started 正在注册全局类…… (2 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | MonkeyAchievements[39m[0m
+[  33% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started 正在扫描动作…… (4 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | 05_trophy_waiting.png[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | 06_trophy_burst.png[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | 07_achievement_toast.png[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | 08_toast_queue.png[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started 正在导入或重新导入资产 (4 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | 正在准备重新导入文件……[39m[0m
+[  20% ] [90m[1mreimport[22m | 正在准备重新导入文件……[39m[0m
+[  40% ] [90m[1mreimport[22m | 正在准备重新导入文件……[39m[0m
+[  60% ] [90m[1mreimport[22m | 正在准备重新导入文件……[39m[0m
+[   0% ] [90m[1mreimport[22m | 正在执行重新导入的前置操作……[39m[0m
+[   0% ] [90m[1mreimport[22m | 05_trophy_waiting.png[39m[0m
+[  20% ] [90m[1mreimport[22m | 06_trophy_burst.png[39m[0m
+[  40% ] [90m[1mreimport[22m | 07_achievement_toast.png[39m[0m
+[  60% ] [90m[1mreimport[22m | 08_toast_queue.png[39m[0m
+[  80% ] [90m[1mreimport[22m | 正在结束资产导入……[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started 正在导入或重新导入资产 (4 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | 正在执行重新导入的后置操作……[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
 [   0% ] [90m[1msavepack[22m | Started 打包中 (102 steps)[39m[0m
-[   1% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex[39m[0m
-[   1% ] [90m[1msavepack[22m | 正在保存文件：res://icon.svg.import[39m[0m
-[   6% ] [90m[1msavepack[22m | 正在保存文件：res://tools/verification.gdc[39m[0m
-[  11% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/follow_camera.gdc[39m[0m
-[  16% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/forest.gdc[39m[0m
-[  22% ] [90m[1msavepack[22m | 正在保存文件：res://shaders/retro.gdshader[39m[0m
+[   1% ] [90m[1msavepack[22m | 正在保存文件：res://assets/fonts/OFL.txt[39m[0m
+[   4% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex[39m[0m
+[   4% ] [90m[1msavepack[22m | 正在保存文件：res://icon.svg.import[39m[0m
+[   7% ] [90m[1msavepack[22m | 正在保存文件：res://tools/verification.gdc[39m[0m
+[  11% ] [90m[1msavepack[22m | 正在保存文件：res://tools/reward_verification.gdc[39m[0m
+[  14% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_profile.gdc[39m[0m
+[  17% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/two_bone_ik.gdc[39m[0m
+[  21% ] [90m[1msavepack[22m | 正在保存文件：res://shaders/retro.gdshader[39m[0m
+[  24% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/main.gdc[39m[0m
 [  27% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/ladder.gdc[39m[0m
-[  32% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/main.gdc[39m[0m
-[  36% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-654646086726c6f8522c94effbb6f6d0-monkey_rig.scn[39m[0m
-[  42% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-f4a5759f621ee0012c203657a92ab724-climb_profile.res[39m[0m
-[  47% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-171b6540a4c3cdae5b0905e52ed5116f-camera.scn[39m[0m
-[  52% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-3aa35002fd37dc00e3e79d85fc7a0741-forest.scn[39m[0m
-[  57% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-ccee5f233e89c192c1c7880cf7b4d226-ladder.scn[39m[0m
-[  63% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn[39m[0m
-[  67% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/body_pose.gdc[39m[0m
-[  72% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_controller.gdc[39m[0m
-[  77% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_profile.gdc[39m[0m
-[  83% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/two_bone_ik.gdc[39m[0m
-[  88% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/monkey_rig.gdc[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/skin_geometry.gdc[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://tools/verification.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/follow_camera.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/forest.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/ladder.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/main.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://assets/monkey_rig.tscn.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://resources/climb_profile.tres.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/camera.tscn.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/forest.tscn.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/ladder.tscn.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/main.tscn.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/body_pose.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_controller.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_profile.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/two_bone_ik.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/monkey_rig.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/skin_geometry.gd.remap[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/global_script_class_cache.cfg[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://icon.svg[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/uid_cache.bin[39m[0m
-[  93% ] [90m[1msavepack[22m | 正在保存文件：res://project.binary[39m[0m
+[  31% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/forest.gdc[39m[0m
+[  33% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/follow_camera.gdc[39m[0m
+[  36% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/monkey_rig.gdc[39m[0m
+[  40% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/skin_geometry.gdc[39m[0m
+[  43% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/imported/ZCOOLQingKeHuangYou-Regular.ttf-8e87ec5b5c6a5865ae7cea9c13806a5e.fontdata[39m[0m
+[  43% ] [90m[1msavepack[22m | 正在保存文件：res://assets/fonts/ZCOOLQingKeHuangYou-Regular.ttf.import[39m[0m
+[  46% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-654646086726c6f8522c94effbb6f6d0-monkey_rig.scn[39m[0m
+[  50% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-753ab5742ce3c39000d5d532b10adbb6-achievement_profile.res[39m[0m
+[  53% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-f4a5759f621ee0012c203657a92ab724-climb_profile.res[39m[0m
+[  56% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-171b6540a4c3cdae5b0905e52ed5116f-camera.scn[39m[0m
+[  60% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-3aa35002fd37dc00e3e79d85fc7a0741-forest.scn[39m[0m
+[  63% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-ccee5f233e89c192c1c7880cf7b4d226-ladder.scn[39m[0m
+[  66% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn[39m[0m
+[  69% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/achievement_manager.gdc[39m[0m
+[  72% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/achievement_profile.gdc[39m[0m
+[  75% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/achievement_toast.gdc[39m[0m
+[  79% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/trophy_debris.gdc[39m[0m
+[  82% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/trophy_icon.gdc[39m[0m
+[  85% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/trophy_model.gdc[39m[0m
+[  89% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/trophy_pickup.gdc[39m[0m
+[  92% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/body_pose.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_controller.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://tools/verification.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://tools/reward_verification.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_profile.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/two_bone_ik.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/main.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/ladder.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/forest.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/world/follow_camera.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/monkey_rig.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/rig/skin_geometry.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://assets/monkey_rig.tscn.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://resources/achievement_profile.tres.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://resources/climb_profile.tres.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/camera.tscn.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/forest.tscn.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/ladder.tscn.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scenes/main.tscn.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/achievement_manager.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/achievement_profile.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/achievement_toast.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/trophy_debris.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/trophy_icon.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/trophy_model.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/achievements/trophy_pickup.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/body_pose.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://scripts/animation/climb_controller.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/global_script_class_cache.cfg[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://icon.svg[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://.godot/uid_cache.bin[39m[0m
+[  95% ] [90m[1msavepack[22m | 正在保存文件：res://project.binary[39m[0m
 [92m[ DONE ][39m [1msavepack[22m
 [0m
